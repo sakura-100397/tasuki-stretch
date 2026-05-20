@@ -559,7 +559,35 @@
     .menu-list { padding: 0; margin: 18px 0 0; list-style: none; display: grid; gap: 9px; }
     .menu-list li { position: relative; padding-left: 20px; font-size: 14px; color: rgba(47,41,36,.74); }
     .menu-list li::before { content: ""; position: absolute; left: 2px; top: .82em; width: 7px; height: 7px; border-radius: 50%; background: var(--gold); }
+.price-note {
+  max-width: 880px;
+  margin: 28px auto 0;
+  padding: 26px 30px;
+  border-radius: var(--radius-lg);
+  background: rgba(255,253,248,.82);
+  border: 1px solid rgba(197, 160, 90, .26);
+  box-shadow: 0 14px 44px rgba(70, 55, 38, .08);
+  text-align: center;
+}
 
+.price-note h3 {
+  margin-bottom: 12px;
+  color: #8a6b32;
+  font-size: 20px;
+  letter-spacing: .08em;
+}
+
+.price-note p {
+  margin: 0 0 10px;
+  color: rgba(47,41,36,.72);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.price-note p:last-child {
+  margin-bottom: 0;
+  font-size: 13px;
+}
     .flow {
       counter-reset: flow;
       display: grid;
