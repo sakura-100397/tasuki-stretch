@@ -5,8 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TASUKI STRETCH | タスキストレッチ</title>
   <meta name="description" content="美しく、しなやかに、私を整える。東洋医学の経絡の考え方を美容コンディショニングに応用した、たすきを使うストレッチ体験。" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NSKCSJ3MEB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-NSKCSJ3MEB');
+  </script>
+
   <link rel="stylesheet" href="styles.css" />
-  <!-- 画像は image/filename.jpg のような相対パスで参照できます -->
 </head>
 <body>
   <header class="topbar">
@@ -21,7 +31,12 @@
         <a href="#before-after">Before/After</a>
         <!-- <a href="#discount">IBJ会員優待</a> -->
         <a href="#faq">FAQ</a>
-        <a class="btn" href="https://reserva.be/tasukistretch/reserve?mode=service_staff&search_evt_no=f7eJwzNTY0MbAAAAQ7ATY">体験予約</a>
+        <a class="btn" 
+          href="https://reserva.be/tasukistretch/reserve?mode=service_staff&search_evt_no=f7eJwzNTY0MbAAAAQ7ATY"  
+          onclick="gtag('event', 'click_reserva', {
+            event_category: 'outbound',
+      event_label: 'reserve_button'
+          });">体験予約</a>
       </nav>
     </div>
   </header>
@@ -36,7 +51,13 @@
             <span class="small">たすきでめぐる、<br />美容コンディショニング</span>
           </h1>
           <div class="hero-actions">
-            <a class="btn gold" href="https://reserva.be/tasukistretch/reserve?mode=service_staff&search_evt_no=f7eJwzNTY0MbAAAAQ7ATY">初回体験を予約する</a>
+            <a class="btn gold"   
+              href="https://reserva.be/tasukistretch/reserve?mode=service_staff&search_evt_no=f7eJwzNTY0MbAAAAQ7ATY"  
+              onclick="gtag('event', 'click_reserva', {
+                event_category: 'outbound',
+                event_label: 'reserve_button'
+                });"
+              >初回体験を予約する</a>
             <a class="btn subtle" href="#menu">メニューを見る</a>
           </div>
           <p class="note">※医療行為・治療・痩身効果を保証するサービスではありません。<br />姿勢意識・美容意識・コンディションづくりをサポートするプログラムです。</p>
@@ -110,7 +131,13 @@
     姿勢・巡り・身体感覚にやさしく向き合いながら、<br />
     今の自分を心地よく整える時間を。
   </p>
-  <a class="btn gold problem-cta__btn" href="https://reserva.be/tasukistretch/reserve?mode=service_staff&search_evt_no=f7eJwzNTY0MbAAAAQ7ATY">
+  <a class="btn gold problem-cta__btn"   
+    href="https://reserva.be/tasukistretch/reserve?mode=service_staff&search_evt_no=f7eJwzNTY0MbAAAAQ7ATY"  
+    onclick="gtag('event', 'click_reserva', {
+      event_category: 'outbound',
+      event_label: 'reserve_button'
+  });"
+    >
     初回体験を予約する
   </a>
 </div>
@@ -235,7 +262,13 @@
           <span>無理なく始められる内容</span>
         </div>
 
-        <a class="btn gold trial-btn" href="https://reserva.be/tasukistretch/reserve?mode=service_staff&search_evt_no=f7eJwzNTY0MbAAAAQ7ATY">
+        <a class="btn gold trial-btn"   
+          href="https://reserva.be/tasukistretch/reserve?mode=service_staff&search_evt_no=f7eJwzNTY0MbAAAAQ7ATY"  
+          onclick="gtag('event', 'click_reserva', {
+            event_category: 'outbound',
+            event_label: 'reserve_button'
+            });"
+          >
           初回体験を予約する
         </a>
       </div>
@@ -394,8 +427,20 @@
         <h2>美しく、しなやかに、<br />私を整える。</h2>
         <p>まずは初回体験から。<br />たすきで身体の感覚に気づき、日常の姿勢と呼吸を整えるきっかけをつくりませんか。</p>
         <div class="hero-actions" style="justify-content:center;">
-          <a class="btn gold" href="https://reserva.be/tasukistretch/reserve?mode=service_staff&search_evt_no=f7eJwzNTY0MbAAAAQ7ATY">初回体験を予約する</a>
-          <a class="btn subtle" href="https://lin.ee/ys3Z9mR">問い合わせる</a>
+          <a class="btn gold"   
+            href="https://reserva.be/tasukistretch/reserve?mode=service_staff&search_evt_no=f7eJwzNTY0MbAAAAQ7ATY"  
+            onclick="gtag('event', 'click_reserva', {
+              event_category: 'outbound',
+              event_label: 'reserve_button'
+              });"
+            >初回体験を予約する</a>
+          <a class="btn subtle"   
+            href="https://lin.ee/ys3Z9mR"  
+            onclick="gtag('event', 'click_line', {
+              event_category: 'outbound',
+              event_label: 'line_button'
+            });"
+            >問い合わせる</a>
         </div>
       </div>
     </section>
