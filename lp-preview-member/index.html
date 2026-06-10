@@ -1,0 +1,1146 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow,noarchive,nosnippet,noimageindex" />
+  <title>TASUKI STRETCH | IBJ会員特別優待 LP Design</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DNB86331T9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-DNB86331T9');
+  </script>
+  <style>
+    :root {
+      --ink: #30282a;
+      --text: #55494a;
+      --muted: #817475;
+      --line: #eadedc;
+      --paper: #fffafa;
+      --soft: #f8efee;
+      --coral: #d97d74;
+      --rose: #b86f7c;
+      --green: #5d8175;
+      --sage: #e7f0eb;
+      --gold: #b99761;
+      --white: #ffffff;
+      --shadow: 0 22px 54px rgba(39, 37, 34, .12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: "Hiragino Sans", "Yu Gothic", "Noto Sans JP", system-ui, sans-serif;
+      line-height: 1.8;
+      letter-spacing: 0;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      overflow: hidden;
+      background:
+        linear-gradient(180deg, #fff8f7 0%, #fbf3f1 36%, #ffffff 100%);
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: fixed;
+      z-index: 50;
+      top: 0;
+      left: 0;
+      right: 0;
+      color: var(--ink);
+      background: rgba(255, 250, 249, .84);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(184, 111, 124, .18);
+    }
+
+    .nav {
+      min-height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      letter-spacing: .06em;
+    }
+
+    .brand img {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: #fff;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: 13px;
+      color: rgba(48, 40, 42, .78);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 22px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      color: #fff;
+      background: linear-gradient(135deg, var(--rose), var(--coral));
+      box-shadow: 0 14px 32px rgba(184, 111, 124, .24);
+    }
+
+    .btn-secondary {
+      color: #fff;
+      border-color: rgba(255, 255, 255, .7);
+      background: rgba(255, 255, 255, .12);
+    }
+
+    .btn-dark {
+      color: var(--ink);
+      background: linear-gradient(135deg, #fae8e6, #f6dedd);
+      box-shadow: 0 14px 32px rgba(86, 119, 107, .24);
+    }
+
+    .hero {
+      position: relative;
+      min-height: 88vh;
+      padding: 124px 0 56px;
+      color: #fff;
+      display: grid;
+      align-items: end;
+      background-image: url("images/hero.png");
+      background-position: center 42%;
+      background-size: min(100vw, 1180px) auto;
+      background-repeat: no-repeat;
+      background-color: #6f5a58;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(58, 43, 44, .50) 0%, rgba(80, 58, 60, .28) 42%, rgba(255, 245, 243, .08) 100%),
+        linear-gradient(180deg, rgba(255, 248, 247, .16) 0%, rgba(255, 248, 247, .04) 44%, rgba(65, 47, 49, .28) 100%);
+    }
+
+    .hero .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-content {
+      max-width: 760px;
+      padding-bottom: 22px;
+      text-shadow: 0 2px 18px rgba(48, 40, 42, .22);
+    }
+
+    .tagline {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 11px 20px;
+      margin-bottom: 24px;
+      border: 1px solid rgba(255, 255, 255, .62);
+      border-radius: 999px;
+      background: rgba(184, 111, 124, .58);
+      box-shadow: 0 12px 30px rgba(80, 58, 60, .18);
+      font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: .04em;
+    }
+
+    .hero-kicker {
+      max-width: 650px;
+      margin: 0 0 12px;
+      font-size: 18px;
+      font-weight: 700;
+      color: rgba(255, 255, 255, .92);
+    }
+
+    .hero h1 {
+      margin: 0 0 22px;
+      font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+      font-size: 66px;
+      line-height: 1.18;
+      font-weight: 700;
+      letter-spacing: .04em;
+    }
+
+    .sp-break {
+      display: none;
+    }
+
+    .pc-break {
+      display: block;
+    }
+
+    .nowrap {
+      white-space: nowrap;
+    }
+
+    .hero-lead {
+      max-width: 650px;
+      margin: 0 0 30px;
+      font-size: 18px;
+      font-weight: 700;
+      color: rgba(255, 255, 255, .9);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      align-items: flex-start;
+      margin-bottom: 24px;
+    }
+
+    .hero-actions .btn {
+      width: min(100%, 270px);
+      min-height: 58px;
+      font-size: 15px;
+    }
+
+    .hero-note {
+      max-width: 700px;
+      margin: 0;
+      color: rgba(255, 255, 255, .72);
+      font-size: 12px;
+    }
+
+    .section {
+      padding: 48px 0;
+    }
+
+    .section-tight {
+      padding: 36px 0;
+    }
+
+    .section-label {
+      display: block;
+      margin-bottom: 12px;
+      color: var(--rose);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .section-head {
+      display: block;
+      max-width: 820px;
+      margin-bottom: 28px;
+    }
+
+    .section-head h2,
+    .split h2,
+    .trial h2,
+    .final h2 {
+      margin: 0;
+      font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+      font-size: 38px;
+      line-height: 1.35;
+      font-weight: 700;
+    }
+
+    .section-head p {
+      margin: 16px 0 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .problem-card,
+    .reason-card,
+    .course-card,
+    .faq-card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0 12px 34px rgba(39, 37, 34, .06);
+    }
+
+    .problem-card {
+      min-height: 0;
+      padding: 18px;
+    }
+
+    .problem-card .mark {
+      display: inline-grid;
+      place-items: center;
+      width: 28px;
+      height: 28px;
+      margin-bottom: 12px;
+      color: #fff;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--rose), var(--coral));
+      font-weight: 700;
+    }
+
+    .problem-card p {
+      margin: 0;
+      color: var(--text);
+      font-weight: 700;
+      line-height: 1.65;
+    }
+
+    .effect-section {
+      background: #fff;
+    }
+
+    .effect-lead {
+      max-width: 820px;
+      margin: 0 0 24px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .effect-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .effect-card {
+      min-height: 0;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: linear-gradient(180deg, #fff, #fff8f7);
+      box-shadow: 0 12px 34px rgba(39, 37, 34, .06);
+    }
+
+    .effect-card strong {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--ink);
+      font-size: 18px;
+      line-height: 1.55;
+    }
+
+    .effect-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+      gap: 56px;
+      align-items: center;
+    }
+
+    .photo-stack {
+      grid-template-columns: .92fr .72fr;
+      gap: 16px;
+      align-items: end;
+    }
+
+    .photo-stack img,
+    .ba-photo img,
+    .wide-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .photo-main {
+      height: 560px;
+    }
+
+    .photo-sub {
+      height: 370px;
+      margin-bottom: 42px;
+    }
+
+    .split p {
+      color: var(--muted);
+    }
+
+    .text-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 26px;
+    }
+
+    .text-list div {
+      padding: 18px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .text-list strong {
+      display: block;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+
+    .reason-section {
+      background: #fff;
+    }
+
+    .reason-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .reason-card {
+      min-height: 0;
+      padding: 20px;
+    }
+
+    .reason-card .num {
+      color: var(--gold);
+      font-family: Georgia, serif;
+      font-size: 34px;
+      line-height: 1;
+    }
+
+    .reason-card h3 {
+      min-height: 0;
+      margin: 16px 0 10px;
+      font-size: 20px;
+      line-height: 1.55;
+    }
+
+    .reason-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .trial {
+      position: relative;
+      overflow: hidden;
+      color: #fff;
+      background:
+        linear-gradient(135deg, rgba(184, 111, 124, .34), transparent 44%),
+        linear-gradient(135deg, #5d8175, #7a9b8f);
+    }
+
+    .trial-grid {
+      display: grid;
+      grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+      gap: 44px;
+      align-items: center;
+    }
+
+    .trial-panel {
+      position: relative;
+      padding: 32px;
+      padding-top: 78px;
+      border: 1px solid rgba(255, 255, 255, .24);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, .13);
+    }
+
+    .free {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 10px 14px;
+      margin-bottom: 20px;
+      color: #ffe7e5;
+      font-weight: 700;
+    }
+
+    .trial .price-label {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      z-index: 2;
+    }
+
+    .price-label {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 5px 12px;
+      border-radius: 999px;
+      color: #244238;
+      background: #d6c49a;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .04em;
+    }
+
+    .free b {
+      font-size: 52px;
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    .free small {
+      font-size: .48em;
+    }
+
+    .trial p {
+      color: rgba(255, 255, 255, .82);
+    }
+
+    .trial-points {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin: 28px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .trial-points li {
+      padding: 14px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, .12);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .wide-image {
+      height: 470px;
+      box-shadow: var(--shadow);
+    }
+
+    .ba {
+      background: #fff6f5;
+    }
+
+    .ba .section-head {
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr);
+    }
+
+    .ba .section-head h2 {
+      font-size: 34px;
+      line-height: 1.45;
+    }
+
+    .ba-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .ba-photo {
+      position: relative;
+      height: 430px;
+      overflow: hidden;
+      border-radius: 8px;
+      background: #ddd;
+      box-shadow: var(--shadow);
+    }
+
+    .ba-photo .caption {
+      position: absolute;
+      left: 18px;
+      bottom: 18px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      color: #fff;
+      background: rgba(39, 37, 34, .72);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .ba-label {
+      position: absolute;
+      top: 18px;
+      z-index: 2;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 82px;
+      min-height: 32px;
+      padding: 0 16px;
+      border-radius: 999px;
+      color: #fff;
+      background: rgba(184, 111, 124, .88);
+      box-shadow: 0 8px 20px rgba(48, 40, 42, .14);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-transform: lowercase;
+    }
+
+    .ba-label.before {
+      left: 25%;
+      transform: translateX(-50%);
+      background: rgba(95, 83, 78, .72);
+    }
+
+    .ba-label.after {
+      left: 75%;
+      transform: translateX(-50%);
+    }
+
+    .ba-note {
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .course-card {
+      padding: 22px;
+    }
+
+    .course-card.featured {
+      border-color: rgba(200, 111, 97, .5);
+      box-shadow: 0 20px 48px rgba(200, 111, 97, .14);
+    }
+
+    .course-card .badge {
+      display: inline-flex;
+      margin-bottom: 16px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      color: #fff;
+      background: var(--coral);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .course-card h3 {
+      margin: 0 0 14px;
+      font-size: 22px;
+    }
+
+    .price {
+      margin: 0 0 18px;
+      color: var(--green);
+      font-size: 30px;
+      font-weight: 700;
+    }
+
+    .price small {
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .course-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .faq-card {
+      padding: 20px;
+    }
+
+    .faq-card strong {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .faq-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .final {
+      color: #fff;
+      background:
+        linear-gradient(90deg, rgba(67, 47, 50, .78), rgba(67, 47, 50, .34)),
+        url("images/lesson.png") center / cover;
+    }
+
+    .final-inner {
+      max-width: 720px;
+    }
+
+    .final p {
+      color: rgba(255, 255, 255, .86);
+    }
+
+    .footer-note {
+      margin-top: 24px;
+      color: rgba(255, 255, 255, .68);
+      font-size: 12px;
+    }
+
+    .site-footer {
+      padding: 32px 0;
+      background: #f7eeec;
+      border-top: 1px solid var(--line);
+    }
+
+    .site-footer p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.9;
+      text-align: center;
+    }
+
+    @media (max-width: 900px) {
+      .nav-links {
+        display: none;
+      }
+
+      .container {
+        width: min(1120px, calc(100% - 40px));
+      }
+
+      .hero {
+        min-height: 84vh;
+        padding-top: 112px;
+        background-size: auto 92%;
+        background-position: center top;
+      }
+
+      .hero-content {
+        max-width: 100%;
+      }
+
+      .hero h1 {
+        font-size: clamp(30px, 8.8vw, 38px);
+        line-height: 1.24;
+      }
+
+      .hero-kicker,
+      .hero-lead {
+        font-size: 15px;
+        line-height: 1.8;
+      }
+
+      .tagline {
+        padding: 10px 16px;
+        font-size: 14px;
+        line-height: 1.35;
+      }
+
+      .sp-break {
+        display: block;
+      }
+
+      .pc-break {
+        display: none;
+      }
+
+      .section-head h2,
+      .split h2,
+      .trial h2,
+      .final h2 {
+        font-size: 34px;
+      }
+
+      .trial-panel {
+        padding: 34px 28px;
+        min-width: 0;
+      }
+
+      .free {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+        margin-bottom: 14px;
+      }
+
+      .free b {
+        font-size: 46px;
+      }
+
+      .trial h2 {
+        font-size: 30px;
+      }
+
+      .trial .btn {
+        width: 100%;
+        padding: 0 16px;
+        font-size: 13px;
+      }
+
+      .trial-points li {
+        padding: 12px 8px;
+        font-size: 12px;
+        text-align: center;
+      }
+
+      .trial-points {
+        grid-template-columns: 1fr;
+      }
+
+      .wide-image {
+        width: 100%;
+        min-width: 0;
+      }
+
+      .ba .section-head {
+        display: block;
+        margin-bottom: 30px;
+      }
+
+      .ba .section-head h2 {
+        margin-bottom: 18px;
+        font-size: 30px;
+        line-height: 1.45;
+      }
+
+      .ba .section-head p {
+        font-size: 14px;
+        line-height: 1.9;
+      }
+
+      .section-head,
+      .split,
+      .trial-grid,
+      .ba-grid,
+      .course-grid,
+      .effect-grid,
+      .faq-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .problem-grid,
+      .reason-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .trial .price-label {
+        top: 20px;
+        right: 20px;
+      }
+    }
+
+    @media (min-width: 1280px) {
+      .hero {
+        background-size: 1180px auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <div class="container nav">
+        <a class="brand" href="#top">
+          <img src="images/logo.png" alt="TASUKI STRETCH ロゴ" />
+          <span>TASUKI STRETCH</span>
+        </a>
+        <nav class="nav-links" aria-label="ページ内ナビゲーション">
+          <a href="#about">タスキストレッチ</a>
+          <a href="#trial">初回体験</a>
+          <a href="#before-after">姿勢チェック</a>
+          <a href="#course">料金</a>
+          <a class="btn btn-primary" href="https://reserva.be/tasukistretch/reserve?mode=service_staff&search_evt_no=65eJwzNTYyMTUGAAREATc">体験予約</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="container">
+          <div class="hero-content">
+            <div class="tagline">IBJ会員特別優待</div>
+            <p class="hero-kicker">「また会いたい」と思われる人の共通点は、</p>
+            <h1><span class="nowrap">プロフィールではなく、</span><br /><span class="nowrap">佇まいでした。</span></h1>
+            <p class="hero-lead">
+              背筋が伸びる。表情が変わる。自信が伝わる。婚活のためのタスキストレッチ。
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="https://reserva.be/tasukistretch/reserve?mode=service_staff&search_evt_no=65eJwzNTYyMTUGAAREATc">初回体験を予約する</a>
+              <a class="btn btn-secondary" href="https://lin.ee/ys3Z9mR">まずは問い合わせる</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="section-label">Body Signs</span>
+              <h2>こんなお悩み<br>ありませんか。</h2>
+            </div>
+            <p>
+              それらはすべて、あなたの"身体の内側"で起きている「めぐりの滞り」が原因です。<br>
+              次のお見合いに向けて、数ヶ月かけてヨガやピラティスに通う猶予はありません。
+            </p>
+          </div>
+          <div class="problem-grid">
+            <article class="problem-card">
+              <span class="mark">✓</span>
+              <p>写真と会った時の印象が違うと言われる</p>
+            </article>
+            <article class="problem-card">
+              <span class="mark">✓</span>
+              <p>緊張して表情が硬くなってしまう</p>
+            </article>
+            <article class="problem-card">
+              <span class="mark">✓</span>
+              <p>自信がなく、堂々と振る舞えない</p>
+            </article>
+            <article class="problem-card">
+              <span class="mark">✓</span>
+              <p>猫背や巻き肩がずっと気になっている</p>
+            </article>
+            <article class="problem-card">
+              <span class="mark">✓</span>
+              <p>お見合い後にお断りされることが続いている</p>
+            </article>
+            <article class="problem-card">
+              <span class="mark">✓</span>
+              <p>婚活疲れで、気持ちまで沈みがち</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section effect-section">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="section-label">Effect</span>
+              <h2>タスキストレッチの効果</h2>
+            </div>
+            <p>
+              日本古来の「たすき」を身につけ独自のストレッチで経絡を整えると、姿勢・呼吸・表情が連動して変わります。<br>
+              ヨガやピラティスより負荷は軽く、一度の体験ではっきり効果を実感できます。
+            </p>
+          </div>
+          <div class="effect-grid">
+            <article class="effect-card">
+              <strong>姿勢・立ち姿が整う</strong>
+              <p>猫背・巻き肩が改善し、お見合いで堂々とした佇まいに。</p>
+            </article>
+            <article class="effect-card">
+              <strong>むくみ・たるみが和らぐ</strong>
+              <p>顔・首まわりのめぐりが整い、すっきりした印象へ。</p>
+            </article>
+            <article class="effect-card">
+              <strong>表情・呼吸が変わる</strong>
+              <p>身体がほぐれると笑顔が自然になり、声も出やすくなります。</p>
+            </article>
+            <article class="effect-card">
+              <strong>運動が苦手でも安心</strong>
+              <p>筋力・運動神経は不要。60分のゆったりしたレッスンです。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section ba" id="before-after">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="section-label">Before / After</span>
+              <h2>1回のレッスンで効果を実感。</h2>
+            </div>
+          </div>
+          <div class="ba-grid">
+            <figure class="ba-photo">
+              <img src="images/posture-front.png" alt="横向きの姿勢チェックイメージ" />
+              <span class="ba-label before">before</span>
+              <span class="ba-label after">after</span>
+              <figcaption class="caption">横向きの姿勢チェック</figcaption>
+            </figure>
+            <figure class="ba-photo">
+              <img src="images/posture-side.png" alt="正面の姿勢チェックイメージ" />
+              <span class="ba-label before">before</span>
+              <span class="ba-label after">after</span>
+              <figcaption class="caption">正面の姿勢チェック</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-tight" id="about">
+        <div class="container split">
+          <div>
+            <span class="section-label">About TASUKI STRETCH</span>
+            <h2>なぜタスキストレッチは、<br />短期間で効果を出せるのか。</h2>
+            <div class="text-list">
+              <div>
+                <strong>鍛えるではなく、本来の綺麗な身体に戻す</strong>
+                ジムやヨガ、ピラティスは、筋肉を鍛えて姿勢を「作ろう」とします。ですが、筋肉作りには数ヶ月かかる上、緊張するお見合いの場では作った姿勢は維持できません。<br>
+                タスキストレッチは筋トレではなく、身体のめぐりを整えて「本来の綺麗な状態へ還す」アプローチです。経絡が整うと緊張がほどけ、深い呼吸によって表情筋が緩み、「あなた本来の魅力的な笑顔」がその場で自然と溢れ出します。
+              </div>
+              <div>
+                <strong>日本古来のたすきが「身体のめぐり」を整える</strong>
+                30代・40代の婚活で避けたい「疲れ感」や「暗いオーラ」は、「身体のめぐりの滞り」が原因です。<br>
+                日常のストレスや姿勢の偏りは全身の経絡を乱し、どれだけメイクを整えても相手にどんよりとした印象を与えてしまいます。<br>
+                タスキストレッチは、「たすき」の力で経絡を優しく整え、滞っていためぐりを一気に解放します。<br>
+                それによって、肌の血色が良くなり、座っているだけで幸福感のある明るいオーラが自然と滲み出ます。
+              </div>
+            </div>
+          </div>
+          <div class="photo-stack">
+            <div class="photo-main">
+              <img src="images/lesson.png" alt="少人数で行うタスキストレッチのレッスン風景" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="section trial" id="trial">
+        <div class="container trial-grid">
+          <div class="trial-panel">
+            <span class="section-label" style="color:#ffe7c0;">Campaign</span>
+            <div class="free">
+              <span class="price-label">通常 ¥14,300 → 特別価格</span>
+              <b>3,300円<small>（税込）</small></b>
+              <span>会員様限定 初回体験レッスン</span>
+            </div>
+            <h2>まずは体験レッスンから。</h2>
+            <p>
+              初回は90分の特別プログラム。個別経絡診断で、あなた固有の身体のめぐりのくせと滞りを確認してからレッスンを開始します。「自分の身体に何が起きているか」が、初回でわかります。
+            </p>
+            <a class="btn btn-primary" href="https://reserva.be/tasukistretch/reserve?mode=service_staff&search_evt_no=65eJwzNTYyMTUGAAREATc">体験レッスンの空き状況を見る</a>
+          </div>
+          <div class="wide-image">
+            <img src="images/hero.png" alt="たすきを使った初回体験レッスンのイメージ" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="course">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="section-label">Course & Price</span>
+              <h2>継続レッスン料金</h2>
+            </div>
+            <p>体験後、ご自身のペースに合わせてお選びいただけます。</p>
+          </div>
+          <div class="course-grid">
+            <article class="course-card featured">
+              <span class="badge">月4回コース</span>
+              <h3>週いち標準コース</h3>
+              <p class="price">17,600円 <small>/ 月 税込</small></p>
+              <p>週1回ペースで、姿勢・呼吸・身体感覚を継続的に見直します。</p>
+            </article>
+            <article class="course-card">
+              <span class="badge" style="background:var(--gold);">月2回コース</span>
+              <h3>隔週整えコース</h3>
+              <p class="price">12,100円 <small>/ 月 税込</small></p>
+              <p>隔週ペースで、定期的に自分の身体と向き合う時間を。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-tight">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="section-label">FAQ</span>
+              <h2>よくある質問</h2>
+            </div>
+            <p>
+              初めての方でも安心してご参加いただけます。
+            </p>
+          </div>
+          <div class="faq-grid">
+            <article class="faq-card">
+              <strong>Q：運動神経が悪く、身体も硬いのですが問題ありませんか？</strong>
+              <p>A：問題ありません。無理に鍛えたり、強い圧力を加える運動ではありません。たすきの力を借りて経絡を優しく整えるので、どんな方でもその場で変化を実感していただけます。</p>
+            </article>
+            <article class="faq-card">
+              <strong>Q：ヨガやピラティス、ジムに通っていますが、併用しても大丈夫ですか？</strong>
+              <p>A：はい、ぜひ併用してください。ジムやヨガでの努力を、お見合いの場で輝かせるための仕上げになります。</p>
+            </article>
+            <article class="faq-card">
+              <strong>Q：お見合い直前の利用が良いですか？</strong>
+              <p>A：大切な出会いの前日や当日の駆け込み受講にも効果的ですが、普段から身体のめぐりを整えることで一層大きく持続的な効果を得られます。</p>
+            </article>
+            <article class="faq-card">
+              <strong>Q：男性でも利用できますか？</strong>
+              <p>A：はい、男性会員様も大歓迎です。めぐりと共に姿勢と表情が整うことで、スーツ姿が劇的にスマートになります。座っているだけで「頼りがいのある大人の包容力と自信」がお相手に伝わるようになります。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section final">
+        <div class="container final-inner">
+          <span class="section-label" style="color:#ffe7c0;">Reserve</span>
+          <h2>会った瞬間の印象を、<br />自然体で美しく。</h2>
+          <p>
+            終わったその場で変化を体感。お見合いを「成婚」につなげる仕上げをしませんか。
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://reserva.be/tasukistretch/reserve?mode=service_staff&search_evt_no=65eJwzNTYyMTUGAAREATc">初回体験を予約する</a>
+            <a class="btn btn-secondary" href="https://lin.ee/ys3Z9mR">問い合わせる</a>
+          </div>
+          <p class="footer-note">
+            ※ スタジオはピラティス専用スタジオと兼営の清潔な空間です。<br>
+            ※ 担当トレーナーは40代女性。ご自身もタスキストレッチを実践中です。
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>
+          運営組織：IBJメンバーズ事務局<br>
+          住所：東京都新宿区西新宿1-23-7 新宿ファーストウエスト 12F
+        </p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
