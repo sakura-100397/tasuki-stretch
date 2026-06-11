@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="未来志向のサイエンスと禅を融合し、東洋医学の巡りを現代的に再解釈したウェルネスブランドページ。" />
+	<title>巡りの原点 | サイエンス × 禅</title>
+	<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+	<div class="site-bg" aria-hidden="true">
+		<canvas id="flow-canvas"></canvas>
+		<div class="bg-noise"></div>
+	</div>
+
+	<header class="site-header">
+		<div class="header-inner">
+			<a class="brand" href="#top">
+				<img src="images/tasuki-logo.png" alt="TASUKI STRETCH ロゴ" />
+				<span>TASUKI STRETCH</span>
+			</a>
+			<div id="shared-menu" data-menu-src="partials/menu.html" data-base-prefix=""></div>
+		</div>
+	</header>
+
+	<main id="top">
+		<section class="hero container" aria-label="ファーストビュー">
+			<div class="hero-inner" data-reveal>
+				<span class="kicker">静かなる未来 / サイエンスと禅</span>
+				<h1>巡りの原点。</h1>
+				<p class="hero-sub">深い余白の中で、巡りを象る流体が静かに呼吸する。これからのウェルネスは、騒がしさではなく、澄んだ静けさから始まる。</p>
+				<p class="scroll-cue">下へスクロール</p>
+			</div>
+		</section>
+
+		<section class="section" id="manifesto" aria-labelledby="manifesto-title">
+			<div class="container grid-2">
+				<p class="label-vertical en" data-reveal>思想</p>
+				<div class="manifesto-copy" id="manifesto-title">
+					<p class="fade-line">身体を、ひとつの生態系として科学する。</p>
+					<p class="fade-line">古の智恵が遺した、目に見えない「巡り」の哲学を、現代のテクノロジーで解凍する。</p>
+					<p class="fade-line">これは、あなたの内なる自然を覚醒させる、最も洗練されたサイエンス。</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="section" id="technology" aria-labelledby="technology-title">
+			<div class="container">
+				<div class="section-head" data-reveal>
+					  <h2 class="en-title" id="technology-title">伝統を、未来へ再構成する。</h2>
+					  <p>生薬マクロ / 経絡の光 / 巡りの立体彫刻</p>
+				</div>
+
+				<div class="tech-grid">
+					<article class="tech-card" data-reveal>
+						<div class="tech-media tech-1" role="img" aria-label="生薬を抽象化した立体表現"></div>
+						<div class="tech-body">
+							  <h3>生薬マクロ</h3>
+							<p>生薬の繊維と層を、ミクロ視点の彫刻として再構築。素材は記号ではなく、呼吸する構造体へ。</p>
+						</div>
+					</article>
+
+					<article class="tech-card" data-reveal>
+						<div class="tech-media tech-2" role="img" aria-label="経絡を模した光の抽象ライン"></div>
+						<div class="tech-body">
+							  <h3>経絡フラックス</h3>
+							<p>経絡の概念を線形データとして可視化。身体の内側にある不可視の地形を、光で再定義する。</p>
+						</div>
+					</article>
+
+					<article class="tech-card" data-reveal>
+						<div class="tech-media tech-3" role="img" aria-label="気血水の巡りを示す粒子の流れ"></div>
+						<div class="tech-body">
+							  <h3>気・血・水の同期</h3>
+							<p>気・血・水の巡りを粒子流体として同期。全体性を壊さず、生命のバランスを静かに整える。</p>
+						</div>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<section class="section voices" id="voices" aria-labelledby="voices-title">
+			<div class="container">
+				<div class="section-head" data-reveal>
+					<h2 class="en-title" id="voices-title">お客様の声</h2>
+					<p>実際にご利用いただいた方々からのご感想</p>
+				</div>
+				<div class="voices-track" role="region" aria-label="お客様の声カルーセル">
+					<article class="voice-card">
+						<div class="voice-stars">★★★★★</div>
+						<p class="voice-text">「たった1回のレッスンで、鏡の前に立つ姿勢が全然変わりました。自分でもびっくりするくらい、呼吸が深くなった気がします。」</p>
+						<div class="voice-author"><div class="voice-avatar" aria-hidden="true"></div><span>30代・女性 / 東京都</span></div>
+					</article>
+					<article class="voice-card">
+						<div class="voice-stars">★★★★★</div>
+						<p class="voice-text">「猫背をずっと気にしていたのですが、施術後に歩き方が軽くなって、仕事帰りの疲れ方が明らかに違いました。」</p>
+						<div class="voice-author"><div class="voice-avatar" aria-hidden="true"></div><span>40代・女性 / 神奈川県</span></div>
+					</article>
+					<article class="voice-card">
+						<div class="voice-stars">★★★★☆</div>
+						<p class="voice-text">「ヨガやピラティスとは全く別のアプローチ。身体の内側から整っていく感覚が新鮮でした。また通いたいと思います。」</p>
+						<div class="voice-author"><div class="voice-avatar" aria-hidden="true"></div><span>30代・女性 / 埼玉県</span></div>
+					</article>
+					<article class="voice-card">
+						<div class="voice-stars">★★★★★</div>
+						<p class="voice-text">「顔のむくみが気になっていたのですが、首まわりを整えるだけでこんなに変わるとは。友人にも勧めたいです。」</p>
+						<div class="voice-author"><div class="voice-avatar" aria-hidden="true"></div><span>50代・女性 / 東京都</span></div>
+					</article>
+					<article class="voice-card">
+						<div class="voice-stars">★★★★★</div>
+						<p class="voice-text">「緊張しやすい体質でしたが、経絡を整えてもらうと不思議と気持ちが落ち着きました。定期的に通っています。」</p>
+						<div class="voice-author"><div class="voice-avatar" aria-hidden="true"></div><span>40代・男性 / 千葉県</span></div>
+					</article>
+					<article class="voice-card">
+						<div class="voice-stars">★★★★★</div>
+						<p class="voice-text">「お見合い前日に体験しました。当日、姿勢がいいねと言われてびっくり。内面から変わる感覚が忘れられません。」</p>
+						<div class="voice-author"><div class="voice-avatar" aria-hidden="true"></div><span>30代・女性 / 東京都</span></div>
+					</article>
+					<article class="voice-card">
+						<div class="voice-stars">★★★★☆</div>
+						<p class="voice-text">「筋力ゼロでも大丈夫と言われた通り、まったく辛くなかったです。60分があっという間で、スッキリして帰れました。」</p>
+						<div class="voice-author"><div class="voice-avatar" aria-hidden="true"></div><span>40代・女性 / 神奈川県</span></div>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<section class="section gateway" id="gateway" aria-labelledby="gateway-title">
+			<div class="container">
+				<div class="gateway-panel" data-reveal>
+					<div class="gateway-visual" role="img" aria-label="未来的なプロダクトオブジェ"></div>
+					<h2 class="en-title" id="gateway-title">未来の巡りを、体験する。</h2>
+					<div class="gateway-cta">
+						<a class="btn" href="#">新しい巡りを始める →</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<div id="shared-footer" data-footer-src="partials/footer.html" data-base-prefix=""></div>
+
+	<script src="menu-loader.js" defer></script>
+	<script src="footer-loader.js" defer></script>
+	<script src="main.js" defer></script>
+</body>
+</html>
