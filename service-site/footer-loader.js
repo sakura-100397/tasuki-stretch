@@ -44,7 +44,7 @@
               <ul class="footer-links">
                 <li><a href="${basePrefix}effect/index.html">効果</a></li>
                 <li><a href="${basePrefix}plan/index.html">料金プラン</a></li>
-                <li><a href="${basePrefix}access/index.html">店舗アクセス</a></li>
+                <li><a href="${basePrefix}access/index.html">店舗・アクセス</a></li>
                 <li><a href="${basePrefix}column/index.html">美・健康コラム</a></li>
               </ul>
             </nav>

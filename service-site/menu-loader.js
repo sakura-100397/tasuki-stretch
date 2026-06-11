@@ -10,8 +10,9 @@
         <nav class="nav" aria-label="ページナビゲーション">
           <a href="${basePrefix}effect/index.html">効果</a>
           <a href="${basePrefix}plan/index.html">料金プラン</a>
-          <a href="${basePrefix}access/index.html">店舗アクセス</a>
+          <a href="${basePrefix}access/index.html">店舗・アクセス</a>
           <a href="${basePrefix}column/index.html">美・健康コラム</a>
+          <a class="nav-cta" href="https://reserva.be/tasukistretch/reserve?mode=service_staff&search_evt_no=65eJwzNTYyMTUGAAREATc" target="_blank" rel="noopener noreferrer">初回体験申込み</a>
         </nav>
       </div>
     `;
