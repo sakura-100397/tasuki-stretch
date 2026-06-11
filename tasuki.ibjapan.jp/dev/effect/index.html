@@ -6,14 +6,103 @@
   <meta name="description" content="TASUKI STRETCH の効果ページ" />
   <title>効果 | TASUKI STRETCH</title>
   <link rel="stylesheet" href="../styles.css" />
+  <style>
+    .effect-lead {
+      margin: 0;
+      color: rgba(71, 61, 53, .86);
+      font-size: 16px;
+      line-height: 1.9;
+    }
+
+    .effect-cards {
+      margin-top: 22px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
+    .effect-card {
+      display: grid;
+      grid-template-columns: minmax(260px, 36%) minmax(0, 1fr);
+      align-items: stretch;
+      min-height: 180px;
+      overflow: hidden;
+      border: 1px solid rgba(197, 160, 90, .24);
+      border-radius: 16px;
+      background: rgba(255, 253, 248, .94);
+      box-shadow: 0 10px 24px rgba(70, 55, 38, .08);
+    }
+
+    @media (min-width: 981px) {
+      .effect-card {
+        opacity: 0;
+        transform: translateX(44px);
+        transition: opacity .7s ease, transform .7s ease;
+      }
+
+      .effect-card.is-visible {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .effect-card-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      background: rgba(197, 160, 90, .16);
+    }
+
+    .effect-card-copy {
+      display: grid;
+      gap: 6px;
+      padding: 12px 14px;
+      align-content: center;
+    }
+
+    .effect-card-catch {
+      margin: 0;
+      color: #2f2924;
+      font-size: 24px;
+      line-height: 1.35;
+      font-weight: 700;
+    }
+
+    .effect-card-reason {
+      margin: 0;
+      color: rgba(71, 61, 53, .84);
+      font-size: 14px;
+      line-height: 1.6;
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+    }
+
+    @media (max-width: 980px) {
+      .effect-card {
+        grid-template-columns: 1fr;
+      }
+
+      .effect-card-image {
+        height: auto;
+        aspect-ratio: 16 / 9;
+      }
+
+      .effect-card-catch {
+        font-size: 24px;
+      }
+
+      .effect-card-reason {
+        font-size: 14px;
+      }
+    }
+
+  </style>
 </head>
 <body>
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="../index.html">
-        <img src="../images/tasuki-logo.png" alt="TASUKI STRETCH ロゴ" />
-        <span>TASUKI STRETCH</span>
-      </a>
       <div id="shared-menu" data-menu-src="../partials/menu.html" data-base-prefix="../"></div>
     </div>
   </header>
@@ -24,12 +113,85 @@
         <h1 class="en-title">効果</h1>
         <p>TASUKI STRETCH の体感変化と期待できる効果</p>
       </div>
-      <p class="hero-sub">このページは効果コンテンツ用のページです。詳細内容をここに追加してください。</p>
+
+      <p class="effect-lead">ユースケースに合わせて、日常に現れる変化を整理しました。目的に近いカードから、ご自身の理想の状態をイメージしてみてください。</p>
+
+      <section class="effect-cards" aria-label="ユースケース別の効果">
+        <article class="effect-card">
+          <img class="effect-card-image" src="../images/posture-side.png" alt="背筋が伸びた姿勢イメージ" loading="lazy" />
+          <div class="effect-card-copy">
+            <h2 class="effect-card-catch">長時間デスクワークでも、午後の姿勢が崩れにくい。</h2>
+            <p class="effect-card-reason">体幹と呼吸の連動を再学習することで、首や肩だけに頼らない支え方へ。疲労時にも重心が前へ流れにくくなり、姿勢維持の負担を分散できます。</p>
+          </div>
+        </article>
+
+        <article class="effect-card">
+          <img class="effect-card-image" src="../images/lp_image_2.png" alt="歩行が軽くなるイメージ" loading="lazy" />
+          <div class="effect-card-copy">
+            <h2 class="effect-card-catch">移動や階段で、脚の重さより軽さを先に感じる。</h2>
+            <p class="effect-card-reason">股関節周辺の可動域を広げながら、足裏の荷重バランスを整える設計。蹴る動作と着地動作が滑らかにつながり、歩行時のロスを減らせます。</p>
+          </div>
+        </article>
+
+        <article class="effect-card">
+          <img class="effect-card-image" src="../images/lp_image_3.png" alt="深い呼吸ができるイメージ" loading="lazy" />
+          <div class="effect-card-copy">
+            <h2 class="effect-card-catch">呼吸が深まり、頭と気持ちの切り替えが早くなる。</h2>
+            <p class="effect-card-reason">胸郭と背面の硬さを同時に解放し、吸う・吐くの可動幅を回復。自律神経の過緊張が和らぐことで、仕事や家事のオンオフを作りやすくなります。</p>
+          </div>
+        </article>
+
+        <article class="effect-card">
+          <img class="effect-card-image" src="../images/posture-front.png" alt="立ち姿の変化イメージ" loading="lazy" />
+          <div class="effect-card-copy">
+            <h2 class="effect-card-catch">鏡を見るたび、立ち姿の印象がすっきり整う。</h2>
+            <p class="effect-card-reason">骨格のラインに沿って筋膜の張力を調整し、見た目の左右差や詰まり感を軽減。無理に胸を張らなくても、自然に整ったシルエットを作れます。</p>
+          </div>
+        </article>
+
+        <article class="effect-card">
+          <img class="effect-card-image" src="../images/lp_image_4.png" alt="運動パフォーマンス向上のイメージ" loading="lazy" />
+          <div class="effect-card-copy">
+            <h2 class="effect-card-catch">趣味の運動で、動き出しの反応が一段上がる。</h2>
+            <p class="effect-card-reason">関節ごとの遊びを確保しながら、力の伝達ルートを最適化。必要な場面で素早く出力し、不要な力みを抑えることで、再現性の高い動作につながります。</p>
+          </div>
+        </article>
+      </section>
     </div>
   </main>
 
   <div id="shared-footer" data-footer-src="../partials/footer.html" data-base-prefix="../"></div>
   <script src="../menu-loader.js" defer></script>
   <script src="../footer-loader.js" defer></script>
+  <script>
+    function initEffectCardReveal() {
+      if (window.matchMedia("(max-width: 980px)").matches) return;
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        document.querySelectorAll(".effect-card").forEach((card) => card.classList.add("is-visible"));
+        return;
+      }
+
+      const cards = document.querySelectorAll(".effect-card");
+      if (!cards.length) return;
+
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-visible");
+          obs.unobserve(entry.target);
+        });
+      }, {
+        root: null,
+        threshold: 0.22
+      });
+
+      cards.forEach((card, index) => {
+        card.style.transitionDelay = `${index * 0.07}s`;
+        observer.observe(card);
+      });
+    }
+
+    window.addEventListener("DOMContentLoaded", initEffectCardReveal);
+  </script>
 </body>
 </html>

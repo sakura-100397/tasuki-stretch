@@ -1,4 +1,23 @@
 (function () {
+  function ensureSharedBrand(mount, basePrefix) {
+    const headerInner = mount.closest(".header-inner");
+    if (!headerInner) return;
+    if (headerInner.querySelector(".brand")) return;
+
+    const brand = document.createElement("a");
+    brand.className = "brand";
+    brand.href = `${basePrefix}index.html`;
+    brand.innerHTML = `
+      <img src="${basePrefix}images/tasuki-logo.png" alt="TASUKI STRETCH ロゴ" />
+      <span class="brand-copy">
+        <span class="brand-name">TASUKI STRETCH</span>
+        <span class="brand-subtitle">タスキ ストレッチ</span>
+      </span>
+    `;
+
+    headerInner.insertBefore(brand, mount);
+  }
+
   function buildMenuHtml(basePrefix) {
     return `
       <div class="menu-shell">
@@ -9,9 +28,9 @@
         </button>
         <nav class="nav" aria-label="ページナビゲーション">
           <a href="${basePrefix}effect/index.html">効果</a>
+          <a href="${basePrefix}column/index.html">美・健康コラム</a>
           <a href="${basePrefix}plan/index.html">料金プラン</a>
           <a href="${basePrefix}access/index.html">店舗・アクセス</a>
-          <a href="${basePrefix}column/index.html">美・健康コラム</a>
           <a class="nav-cta" href="https://reserva.be/tasukistretch/reserve?mode=service_staff&search_evt_no=65eJwzNTYyMTUGAAREATc" target="_blank" rel="noopener noreferrer">初回体験申込み</a>
         </nav>
       </div>
@@ -66,6 +85,8 @@
 
     const src = mount.dataset.menuSrc || "partials/menu.html";
     const basePrefix = mount.dataset.basePrefix || "";
+
+    ensureSharedBrand(mount, basePrefix);
 
     try {
       const response = await fetch(src, { cache: "no-cache" });

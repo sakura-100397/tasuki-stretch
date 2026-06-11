@@ -11,6 +11,12 @@
   --blue: #8fb8c8;
   --white: #fffdf8;
   --max: 1160px;
+  --gogyo-fire: rgba(214, 109, 125, .42);
+  --gogyo-earth: rgba(198, 146, 64, .40);
+  --gogyo-wood: rgba(104, 156, 123, .42);
+  --gogyo-metal: rgba(200, 188, 171, .42);
+  --gogyo-water: rgba(96, 155, 180, .40);
+  --gogyo-silk: rgba(255, 251, 246, .42);
 }
 
 * { box-sizing: border-box; }
@@ -23,9 +29,8 @@ html, body {
 body {
   color: var(--ink);
   background:
-    radial-gradient(circle at 18% 8%, rgba(223, 163, 170, .2), transparent 30%),
-    radial-gradient(circle at 86% 6%, rgba(143, 184, 200, .18), transparent 30%),
-    linear-gradient(180deg, #fffaf2 0%, var(--paper) 46%, #f7efe4 100%);
+    radial-gradient(circle at 50% 0%, rgba(255, 255, 255, .36), transparent 54%),
+    linear-gradient(180deg, #fffaf6 0%, var(--paper) 42%, #f7efe4 100%);
   font-family: "Yu Mincho", "Hiragino Mincho ProN", "Yu Gothic", "Hiragino Sans", "Noto Sans JP", serif;
   line-height: 1.85;
   letter-spacing: .02em;
@@ -41,17 +46,43 @@ a { color: inherit; text-decoration: none; }
   pointer-events: none;
 }
 
+.site-bg::before {
+  content: "";
+  position: absolute;
+  inset: -12%;
+  background:
+    radial-gradient(circle at 10% 16%, var(--gogyo-fire), transparent 20%),
+    radial-gradient(circle at 30% 12%, var(--gogyo-earth), transparent 19%),
+    radial-gradient(circle at 50% 14%, var(--gogyo-wood), transparent 20%),
+    radial-gradient(circle at 70% 12%, var(--gogyo-water), transparent 19%),
+    radial-gradient(circle at 90% 16%, var(--gogyo-metal), transparent 18%),
+    linear-gradient(118deg,
+      var(--gogyo-silk) 0%,
+      rgba(214, 109, 125, .26) 10%,
+      rgba(255, 251, 246, .28) 22%,
+      rgba(198, 146, 64, .28) 36%,
+      rgba(255, 251, 246, .26) 49%,
+      rgba(104, 156, 123, .28) 63%,
+      rgba(255, 251, 246, .30) 76%,
+      rgba(96, 155, 180, .26) 90%,
+      rgba(200, 188, 171, .24) 100%);
+  filter: blur(10px) saturate(1.18);
+  opacity: .96;
+}
+
 #flow-canvas {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   opacity: .48;
+  z-index: 1;
 }
 
 .bg-noise {
   position: absolute;
   inset: 0;
+  z-index: 2;
   background-image:
     linear-gradient(90deg, rgba(71, 61, 53, .03) 1px, transparent 1px),
     linear-gradient(rgba(71, 61, 53, .025) 1px, transparent 1px);
@@ -88,6 +119,26 @@ a { color: inherit; text-decoration: none; }
   font-weight: 700;
   letter-spacing: .08em;
   color: var(--sumi);
+}
+
+.brand-copy {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  line-height: 1.15;
+}
+
+.brand-name {
+  display: block;
+}
+
+.brand-subtitle {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: .14em;
+  color: rgba(71, 61, 53, .72);
 }
 
 .brand img {
@@ -341,7 +392,7 @@ a { color: inherit; text-decoration: none; }
   z-index: -1;
   background:
     linear-gradient(90deg, rgba(255, 250, 242, .44), rgba(255, 250, 242, .16) 52%, rgba(255, 250, 242, .48)),
-    url("images/hero.png") center / cover no-repeat;
+    url("images/hero.png") center top / cover no-repeat;
   opacity: 1;
 }
 
@@ -859,7 +910,10 @@ a { color: inherit; text-decoration: none; }
     justify-content: center;
   }
 
-  .hero { min-height: 88vh; }
+  .hero {
+    min-height: 88vh;
+    margin-top: 68px;
+  }
 
   .access-page {
     padding-top: 84px;
@@ -1125,6 +1179,47 @@ a { color: inherit; text-decoration: none; }
 }
 
 @media (max-width: 600px) {
+  .hero {
+    min-height: auto;
+    padding-top: 76px;
+    padding-bottom: 24px;
+  }
+
+  .hero-inner {
+    max-width: 100%;
+  }
+
+  .hero::after {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  .kicker {
+    margin-bottom: 12px;
+    padding: 7px 12px;
+    font-size: 10px;
+    letter-spacing: .12em;
+  }
+
+  .hero h1 {
+    font-size: clamp(34px, 10vw, 48px);
+    line-height: 1.08;
+  }
+
+  .hero-sub {
+    margin-top: 16px;
+    max-width: 24rem;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .scroll-cue {
+    margin-top: 28px;
+    font-size: 10px;
+    letter-spacing: .14em;
+  }
+
   .sticky-cta-button {
     right: 24px;
     bottom: 24px;

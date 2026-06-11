@@ -54,16 +54,19 @@
         <div class="footer-inner">
           <a class="footer-brand" href="${basePrefix}index.html" aria-label="TASUKI STRETCH トップページ">
             <img src="${basePrefix}images/tasuki-logo.png" alt="TASUKI STRETCH ロゴ" />
-            <span>TASUKI STRETCH</span>
+            <span class="brand-copy">
+              <span class="brand-name">TASUKI STRETCH</span>
+              <span class="brand-subtitle">タスキ ストレッチ</span>
+            </span>
           </a>
           <div class="footer-main">
             <nav class="footer-sitemap" aria-label="サイトマップ">
               <h2 class="footer-block-title">SITE MAP</h2>
               <ul class="footer-links">
                 <li><a href="${basePrefix}effect/index.html">効果</a></li>
+                <li><a href="${basePrefix}column/index.html">美・健康コラム</a></li>
                 <li><a href="${basePrefix}plan/index.html">料金プラン</a></li>
                 <li><a href="${basePrefix}access/index.html">店舗・アクセス</a></li>
-                <li><a href="${basePrefix}column/index.html">美・健康コラム</a></li>
               </ul>
             </nav>
             <section class="footer-company" aria-label="運営会社情報">
