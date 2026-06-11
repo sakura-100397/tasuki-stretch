@@ -1,6 +1,20 @@
 (function () {
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const canvas = document.getElementById("flow-canvas");
+  const obiOpening = document.querySelector(".obi-opening");
+
+  if (obiOpening) {
+    if (reduceMotion) {
+      obiOpening.remove();
+    } else {
+      window.setTimeout(() => {
+        obiOpening.classList.add("is-end");
+        window.setTimeout(() => {
+          obiOpening.remove();
+        }, 1000);
+      }, 60);
+    }
+  }
 
   if (canvas && !reduceMotion) {
     const ctx = canvas.getContext("2d", { alpha: true });
@@ -135,5 +149,41 @@
   const manifesto = document.querySelector(".manifesto-copy");
   if (manifesto) {
     lineIo.observe(manifesto);
+  }
+
+  const heroSteps = document.querySelectorAll("[data-hero-step]");
+  if (heroSteps.length) {
+    if (reduceMotion) {
+      heroSteps.forEach((step) => step.classList.add("is-visible"));
+    } else {
+      window.requestAnimationFrame(() => {
+        heroSteps.forEach((step, idx) => {
+          window.setTimeout(() => {
+            step.classList.add("is-visible");
+          }, 140 + idx * 180);
+        });
+      });
+    }
+  }
+
+  const hero = document.querySelector(".hero");
+  if (hero && !reduceMotion) {
+    let ticking = false;
+
+    const updateHeroMist = () => {
+      const rect = hero.getBoundingClientRect();
+      const offset = Math.max(-28, Math.min(28, -rect.top * 0.12));
+      hero.style.setProperty("--hero-mist-offset", `${offset.toFixed(1)}px`);
+      ticking = false;
+    };
+
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(updateHeroMist);
+    };
+
+    updateHeroMist();
+    window.addEventListener("scroll", onScroll, { passive: true });
   }
 })();

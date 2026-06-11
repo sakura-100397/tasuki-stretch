@@ -8,6 +8,14 @@
 	<link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+	<div class="obi-opening" aria-hidden="true">
+		<div class="obi-band" style="--obi-color: rgba(214, 109, 125, .90); --obi-dir: -1;"></div>
+		<div class="obi-band" style="--obi-color: rgba(198, 146, 64, .88); --obi-dir: 1;"></div>
+		<div class="obi-band" style="--obi-color: rgba(104, 156, 123, .88); --obi-dir: -1;"></div>
+		<div class="obi-band" style="--obi-color: rgba(96, 155, 180, .88); --obi-dir: 1;"></div>
+		<div class="obi-band" style="--obi-color: rgba(200, 188, 171, .88); --obi-dir: -1;"></div>
+	</div>
+
 	<div class="site-bg" aria-hidden="true">
 		<canvas id="flow-canvas"></canvas>
 		<div class="bg-noise"></div>
@@ -21,11 +29,10 @@
 
 	<main id="top">
 		<section class="hero container" aria-label="ファーストビュー">
-			<div class="hero-inner" data-reveal>
-				<span class="kicker">静かなる未来 / サイエンスと禅</span>
-				<h1>巡りの原点。</h1>
-				<p class="hero-sub">深い余白の中で、巡りを象る流体が静かに呼吸する。これからのウェルネスは、騒がしさではなく、澄んだ静けさから始まる。</p>
-				<p class="scroll-cue">下へスクロール</p>
+			<div class="hero-inner">
+				<span class="kicker" data-hero-step>静かなる未来 / サイエンスと禅</span>
+				<h1 data-hero-step>巡りの原点。</h1>
+				<p class="hero-sub" data-hero-step>深い余白の中で、巡りを象る流体が静かに呼吸する。これからのウェルネスは、騒がしさではなく、澄んだ静けさから始まる。</p>
 			</div>
 		</section>
 

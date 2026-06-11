@@ -90,6 +90,130 @@ a { color: inherit; text-decoration: none; }
   mask-image: linear-gradient(180deg, rgba(0, 0, 0, .9), rgba(0, 0, 0, .25));
 }
 
+.obi-opening {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  pointer-events: none;
+  display: grid;
+  grid-template-rows: repeat(5, minmax(0, 1fr));
+  opacity: 1;
+  visibility: visible;
+  transition: opacity .8s ease, visibility .8s ease;
+}
+
+.obi-opening::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 45%, rgba(255, 253, 248, .22), transparent 56%);
+}
+
+.obi-band {
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 253, 248, .10);
+  isolation: isolate;
+}
+
+.obi-band::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(102deg,
+      rgba(255, 255, 255, .08) 0%,
+      color-mix(in srgb, var(--obi-color) 78%, white 22%) 35%,
+      var(--obi-color) 50%,
+      color-mix(in srgb, var(--obi-color) 72%, black 28%) 72%,
+      rgba(255, 255, 255, .12) 100%);
+  transform: none;
+  filter: blur(.2px) saturate(1.12);
+  opacity: .98;
+  animation: obi-band-drift 7.2s ease-in-out infinite alternate;
+}
+
+.obi-band::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg,
+      transparent 0%,
+      transparent 26%,
+      rgba(255, 255, 255, .05) 26%,
+      rgba(255, 255, 255, .05) 74%,
+      transparent 74%,
+      transparent 100%),
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, .24) 0 24px,
+      rgba(255, 255, 255, .08) 24px 48px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(46, 35, 24, .16) 0 24px,
+      rgba(255, 255, 255, .02) 24px 48px
+    );
+  background-blend-mode: screen, multiply, normal;
+  transform: none;
+  opacity: .72;
+  mix-blend-mode: soft-light;
+  animation: obi-check-drift 8.6s ease-in-out infinite alternate;
+}
+
+.obi-opening.is-end {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@keyframes obi-band-soft-out {
+  0% {
+    filter: blur(.2px) saturate(1.12);
+    opacity: .98;
+  }
+  100% {
+    filter: blur(9px) saturate(1.02);
+    opacity: 0;
+  }
+}
+
+@keyframes obi-check-soft-out {
+  0% {
+    opacity: .72;
+  }
+  100% {
+    filter: blur(7px);
+    opacity: 0;
+  }
+}
+
+@keyframes obi-band-drift {
+  0% {
+    transform: translateX(calc(var(--obi-dir, 1) * -18px));
+  }
+  100% {
+    transform: translateX(calc(var(--obi-dir, 1) * 18px));
+  }
+}
+
+@keyframes obi-check-drift {
+  0% {
+    transform: translateX(calc(var(--obi-dir, 1) * -24px));
+  }
+  100% {
+    transform: translateX(calc(var(--obi-dir, 1) * 24px));
+  }
+}
+
+.obi-opening.is-end .obi-band::before {
+  animation: obi-band-soft-out .96s ease forwards;
+}
+
+.obi-opening.is-end .obi-band::after {
+  animation: obi-check-soft-out .96s ease forwards;
+}
+
 .site-header {
   position: fixed;
   top: 0;
@@ -385,11 +509,26 @@ a { color: inherit; text-decoration: none; }
   padding-bottom: 72px;
 }
 
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: -8% -4% 0;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 18% 28%, rgba(255, 251, 246, .52), transparent 42%),
+    radial-gradient(circle at 82% 18%, rgba(143, 184, 200, .22), transparent 38%),
+    radial-gradient(circle at 50% 72%, rgba(223, 163, 170, .18), transparent 44%);
+  filter: blur(12px);
+  transform: translate3d(0, var(--hero-mist-offset, 0px), 0);
+  will-change: transform;
+  pointer-events: none;
+}
+
 .hero::after {
   content: "";
   position: absolute;
   inset: 0;
-  z-index: -1;
+  z-index: -2;
   background:
     linear-gradient(90deg, rgba(255, 250, 242, .44), rgba(255, 250, 242, .16) 52%, rgba(255, 250, 242, .48)),
     url("images/hero.png") center top / cover no-repeat;
@@ -397,6 +536,17 @@ a { color: inherit; text-decoration: none; }
 }
 
 .hero-inner { max-width: 920px; }
+
+[data-hero-step] {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity .72s ease, transform .72s ease;
+}
+
+[data-hero-step].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 .kicker {
   display: inline-flex;
@@ -1234,6 +1384,14 @@ a { color: inherit; text-decoration: none; }
     animation: none !important;
     transition: none !important;
     scroll-behavior: auto !important;
+  }
+
+  .obi-opening {
+    display: none;
+  }
+
+  .hero::before {
+    transform: none;
   }
 
   #flow-canvas { display: none; }
