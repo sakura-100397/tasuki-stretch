@@ -1,7 +1,25 @@
 (function () {
+  function loadStickyCta() {
+    if (document.getElementById("sticky-cta-button")) return;
+
+    const button = document.createElement("a");
+    button.id = "sticky-cta-button";
+    button.className = "sticky-cta-button";
+    button.href = "https://reserva.be/tasukistretch/reserve?mode=service_staff&search_evt_no=65eJwzNTYyMTUGAAREATc";
+    button.target = "_blank";
+    button.rel = "noopener noreferrer";
+    button.setAttribute("aria-label", "初回体験申込みページへ移動（新しいウィンドウで開く）");
+    button.textContent = "初回体験申込み";
+
+    document.body.appendChild(button);
+  }
+
   async function loadSharedFooter() {
     const mount = document.getElementById("shared-footer");
-    if (!mount) return;
+    if (!mount) {
+      loadStickyCta();
+      return;
+    }
 
     const src = mount.dataset.footerSrc || "partials/footer.html";
     const basePrefix = mount.dataset.basePrefix || "";
@@ -66,6 +84,8 @@
       `;
       mount.appendChild(fallbackFooter);
     }
+
+    loadStickyCta();
   }
 
   loadSharedFooter();
