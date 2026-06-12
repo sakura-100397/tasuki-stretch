@@ -728,6 +728,8 @@ a { color: inherit; text-decoration: none; }
 }
 
 .setback-card {
+  display: flex;
+  flex-direction: column;
   border: 1px solid rgba(197, 160, 90, .24);
   border-radius: 16px;
   padding: 18px 16px;
@@ -743,7 +745,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 .setback-card p {
-  margin: 10px 0 0;
+  margin: 20px 0 0;
   font-size: var(--font-xs);
   line-height: 1.7;
   color: rgba(47, 41, 36, .84);
@@ -772,9 +774,9 @@ a { color: inherit; text-decoration: none; }
 .tech-1 {
   background-image:
     linear-gradient(160deg, rgba(255, 248, 240, .28), rgba(255, 248, 240, .15)),
-    url("images/feature2.jpg");
-  background-size: 120%;
-  background-position: center 80%;
+    url("images/feature1-gemini.png");
+  background-size: 90%;
+  background-position: center 0%;
 }
 
 .tech-2 {
@@ -1461,14 +1463,71 @@ a { color: inherit; text-decoration: none; }
     --sticky-cta-hover-scale: 1.5;
   }
 
+  .hero h1 {
+    font-size: clamp(22px, 4.2vw, 47px);
+    max-width: 17em;
+  }
+
   #challenge .label-vertical,
   #manifesto .label-vertical {
-    writing-mode: horizontal-tb;
+    writing-mode: vertical-rl;
     transform: none;
-    align-self: start;
-    justify-self: start;
-    max-width: 100%;
+    align-self: center;
+    justify-self: center;
+    max-height: 100%;
     white-space: normal;
+  }
+
+  #challenge .label-vertical {
+    align-self: start;
+    max-height: 58%;
+    overflow: hidden;
+    padding-block-start: 1em;
+    line-height: 1.8;
+  }
+
+  #challenge .label-vertical span {
+    display: inline-block;
+    white-space: nowrap;
+  }
+
+  #challenge .label-vertical span:nth-child(2) {
+    padding-inline-start: 1.2em;
+  }
+
+  #challenge.section .grid-2 {
+    grid-template-columns: 0.7fr 1.3fr;
+  }
+
+  #manifesto.section .grid-2 {
+    grid-template-columns: 0.65fr 1.35fr;
+  }
+
+  #setbacks {
+    margin-top: -600px;
+  }
+
+  #setbacks .setback-card {
+    justify-content: flex-start;
+    text-align: center;
+    min-height: 220px;
+    padding: 28px 20px;
+  }
+
+  #setbacks .setback-card h3 {
+    font-size: calc(var(--font-sm) * 2);
+    min-height: 2.8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #setbacks .setback-card p {
+    text-align: left;
+  }
+
+  #manifesto {
+    margin-top: -120px;
   }
 }
 
