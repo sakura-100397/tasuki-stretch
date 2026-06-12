@@ -12,7 +12,7 @@
         window.setTimeout(() => {
           obiOpening.remove();
         }, 1000);
-      }, 60);
+      }, 250);
     }
   }
 
