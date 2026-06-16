@@ -23,9 +23,11 @@
 
     .effect-card {
       display: grid;
-      grid-template-columns: minmax(260px, 36%) minmax(0, 1fr);
+      grid-template-columns: 300px minmax(0, 1fr);
       align-items: stretch;
-      min-height: 180px;
+      position: relative;
+      min-height: 220px;
+      scroll-margin-top: 110px;
       overflow: hidden;
       border: 1px solid rgba(197, 160, 90, .24);
       border-radius: 16px;
@@ -46,6 +48,11 @@
       }
     }
 
+    .effect-card.is-target {
+      border-color: rgba(197, 160, 90, .62);
+      box-shadow: 0 16px 34px rgba(122, 87, 34, .2);
+    }
+
     .effect-card-image {
       width: 100%;
       height: 100%;
@@ -55,9 +62,30 @@
 
     .effect-card-copy {
       display: grid;
-      gap: 6px;
-      padding: 12px 14px;
+      gap: 10px;
+      padding: 14px 16px;
       align-content: center;
+      justify-items: start;
+      text-align: left;
+    }
+
+    .effect-card-target {
+      position: absolute;
+      top: 14px;
+      left: 0;
+      z-index: 2;
+      margin: 0;
+      padding: 8px 14px;
+      background: linear-gradient(135deg, rgba(197, 160, 90, .96) 0%, rgba(168, 132, 67, .96) 100%);
+      border-radius: 0 999px 999px 0;
+      color: #fffaf2;
+      font-size: var(--font-xs);
+      line-height: 1.55;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      display: inline-block;
+      box-shadow: 0 8px 20px rgba(75, 56, 26, .22);
+      text-shadow: 0 1px 1px rgba(58, 43, 18, .35);
     }
 
     .effect-card-catch {
@@ -66,6 +94,7 @@
       font-size: var(--font-xl);
       line-height: 1.35;
       font-weight: 700;
+      width: 100%;
     }
 
     .effect-card-reason {
@@ -73,15 +102,19 @@
       color: rgba(71, 61, 53, .84);
       font-size: var(--font-xs);
       line-height: 1.6;
-      display: -webkit-box;
-      overflow: hidden;
-      -webkit-box-orient: vertical;
-      -webkit-line-clamp: 3;
+      width: 100%;
     }
 
     @media (max-width: 980px) {
       .effect-card {
         grid-template-columns: 1fr;
+        min-height: auto;
+        height: auto;
+      }
+
+      .effect-card-target {
+        top: 10px;
+        padding: 7px 12px;
       }
 
       .effect-card-image {
@@ -114,46 +147,60 @@
         <p>TASUKI STRETCH の体感変化と期待できる効果</p>
       </div>
 
-      <p class="effect-lead">ユースケースに合わせて、日常に現れる変化を整理しました。目的に近いカードから、ご自身の理想の状態をイメージしてみてください。</p>
+      <p class="effect-lead">トップページの「その他」から選んだテーマごとに、得られる変化を具体化しました。気になる項目からご覧ください。</p>
 
-      <section class="effect-cards" aria-label="ユースケース別の効果">
-        <article class="effect-card">
-          <img class="effect-card-image" src="../images/posture-side.png" alt="背筋が伸びた姿勢イメージ" loading="lazy" />
+      <section class="effect-cards" aria-label="ターゲット別の効果">
+        <article class="effect-card" id="retry-fitness">
+          <span class="effect-card-target">ジム・ヨガ・ピラティスでの挫折を挽回</span>
+          <img class="effect-card-image" src="../images/lp_image_2.png" alt="無理なく続けられる優しいストレッチ" loading="lazy" />
           <div class="effect-card-copy">
-            <h2 class="effect-card-catch">長時間デスクワークでも、午後の姿勢が崩れにくい。</h2>
-            <p class="effect-card-reason">体幹と呼吸の連動を再学習することで、首や肩だけに頼らない支え方へ。疲労時にも重心が前へ流れにくくなり、姿勢維持の負担を分散できます。</p>
+            <h2 class="effect-card-catch">「続かなかった私でも続く」に変わる。</h2>
+            <p class="effect-card-reason">筋力や運動神経に依存しない設計で、身体に負担をかけずに整えるメソッド。頑張り切れなかった経験がある方でも、初回から変化が見えることで継続の自信を取り戻せます。</p>
           </div>
         </article>
 
-        <article class="effect-card">
-          <img class="effect-card-image" src="../images/lp_image_2.png" alt="歩行が軽くなるイメージ" loading="lazy" />
+        <article class="effect-card" id="work-condition">
+          <span class="effect-card-target">仕事のコンディションＵＰ！</span>
+          <img class="effect-card-image" src="../images/lp_image_4.png" alt="一日中快適に働けるコンディション" loading="lazy" />
           <div class="effect-card-copy">
-            <h2 class="effect-card-catch">移動や階段で、脚の重さより軽さを先に感じる。</h2>
-            <p class="effect-card-reason">股関節周辺の可動域を広げながら、足裏の荷重バランスを整える設計。蹴る動作と着地動作が滑らかにつながり、歩行時のロスを減らせます。</p>
+            <h2 class="effect-card-catch">集中力と回復力が上がり、仕事が軽くなる。</h2>
+            <p class="effect-card-reason">呼吸と姿勢が整うことで、肩や首の負担が分散。午後のパフォーマンス低下や疲労の蓄積を抑え、オンオフの切り替えもしやすくなります。忙しい時期ほど差が出る変化です。</p>
           </div>
         </article>
 
-        <article class="effect-card">
-          <img class="effect-card-image" src="../images/lp_image_3.png" alt="深い呼吸ができるイメージ" loading="lazy" />
+        <article class="effect-card" id="marriage-activity">
+          <span class="effect-card-target">婚活でお相手から褒められる</span>
+          <img class="effect-card-image" src="../images/posture-side.png" alt="お見合いで選ばれる佇まい" loading="lazy" />
           <div class="effect-card-copy">
-            <h2 class="effect-card-catch">呼吸が深まり、頭と気持ちの切り替えが早くなる。</h2>
-            <p class="effect-card-reason">胸郭と背面の硬さを同時に解放し、吸う・吐くの可動幅を回復。自律神経の過緊張が和らぐことで、仕事や家事のオンオフを作りやすくなります。</p>
+            <h2 class="effect-card-catch">第一印象が整い、「また会いたい」に近づく。</h2>
+            <p class="effect-card-reason">胸が開き、視線と呼吸が安定することで、緊張時でも自然な会話がしやすくなります。姿勢と表情の印象が変わることで、婚活の場で褒められるポイントが増えていきます。</p>
           </div>
         </article>
 
-        <article class="effect-card">
-          <img class="effect-card-image" src="../images/posture-front.png" alt="立ち姿の変化イメージ" loading="lazy" />
+        <article class="effect-card" id="aging-care">
+          <span class="effect-card-target">アクティブに老後を過ごす</span>
+          <img class="effect-card-image" src="../images/posture-front.png" alt="気品ある立ち姿と歩き方" loading="lazy" />
           <div class="effect-card-copy">
-            <h2 class="effect-card-catch">鏡を見るたび、立ち姿の印象がすっきり整う。</h2>
-            <p class="effect-card-reason">骨格のラインに沿って筋膜の張力を調整し、見た目の左右差や詰まり感を軽減。無理に胸を張らなくても、自然に整ったシルエットを作れます。</p>
+            <h2 class="effect-card-catch">動ける身体と、前向きな気持ちを維持できる。</h2>
+            <p class="effect-card-reason">全身の連動を整えることで、歩行や立ち座りが滑らかになり、日常動作の不安を軽減。身体の快適さが増えるほど外出や交流が増え、活力ある毎日を続けやすくなります。</p>
           </div>
         </article>
 
-        <article class="effect-card">
-          <img class="effect-card-image" src="../images/lp_image_4.png" alt="運動パフォーマンス向上のイメージ" loading="lazy" />
+        <article class="effect-card" id="photo-video">
+          <span class="effect-card-target">写真・映像での映りが良くなる</span>
+          <img class="effect-card-image" src="../images/lp_image_1.png" alt="写真や映像で印象よく見える立ち姿" loading="lazy" />
           <div class="effect-card-copy">
-            <h2 class="effect-card-catch">趣味の運動で、動き出しの反応が一段上がる。</h2>
-            <p class="effect-card-reason">関節ごとの遊びを確保しながら、力の伝達ルートを最適化。必要な場面で素早く出力し、不要な力みを抑えることで、再現性の高い動作につながります。</p>
+            <h2 class="effect-card-catch">画面越しでも「姿勢がきれい」が伝わる。</h2>
+            <p class="effect-card-reason">首まわりと胸郭の詰まりが軽減されることで、顔の角度や輪郭の見え方が整いやすくなります。写真・動画・オンライン会議などで、自然体のまま好印象を作れる状態へ導きます。</p>
+          </div>
+        </article>
+
+        <article class="effect-card" id="beauty-health-insight">
+          <span class="effect-card-target">美容・健康に関する新しい学びと気付き</span>
+          <img class="effect-card-image" src="../images/lp_image_3.png" alt="内側から輝く美しさ" loading="lazy" />
+          <div class="effect-card-copy">
+            <h2 class="effect-card-catch">内側から整う実感が、美容と健康の見方を変える。</h2>
+            <p class="effect-card-reason">東洋医学の考え方をベースに、呼吸・姿勢・循環の関係を体感的に理解。自分の身体に合う整え方がわかり、日々のセルフケア選びにも納得感が生まれます。</p>
           </div>
         </article>
       </section>
@@ -191,7 +238,26 @@
       });
     }
 
-    window.addEventListener("DOMContentLoaded", initEffectCardReveal);
+    function scrollToHashCard() {
+      if (!window.location.hash) return;
+      const target = document.querySelector(window.location.hash);
+      if (!target || !target.classList.contains("effect-card")) return;
+
+      target.classList.add("is-target");
+      setTimeout(() => target.classList.remove("is-target"), 1600);
+
+      // fixed header offset
+      const header = document.querySelector(".site-header");
+      const headerHeight = header ? header.offsetHeight : 0;
+      const top = target.getBoundingClientRect().top + window.scrollY - headerHeight - 18;
+      window.scrollTo({ top, behavior: "smooth" });
+    }
+
+    window.addEventListener("DOMContentLoaded", () => {
+      initEffectCardReveal();
+      setTimeout(scrollToHashCard, 120);
+    });
+    window.addEventListener("hashchange", scrollToHashCard);
   </script>
 </body>
 </html>

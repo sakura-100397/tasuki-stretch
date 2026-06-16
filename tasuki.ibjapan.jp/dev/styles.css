@@ -886,6 +886,66 @@ a { color: inherit; text-decoration: none; }
   text-align: center;
 }
 
+.change-links-title {
+  margin: 28px 0 10px;
+  color: #9d4f62;
+  font-size: var(--font-md);
+  font-weight: 700;
+  letter-spacing: .06em;
+  line-height: 1.4;
+}
+
+.change-links {
+  margin-top: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.change-link-card {
+  min-height: 76px;
+  padding: 14px 44px 14px 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(197, 160, 90, .32);
+  background: linear-gradient(145deg, rgba(255, 253, 248, .96), rgba(250, 244, 234, .92));
+  box-shadow: 0 10px 20px rgba(79, 60, 34, .08);
+  color: #8a6b32;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", "Yu Gothic", "Hiragino Sans", "Noto Sans JP", serif;
+  font-size: var(--font-xs);
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: .02em;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+
+.change-link-card::after {
+  content: "→";
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(163, 118, 46, .95);
+  font-size: var(--font-sm);
+  line-height: 1;
+  font-weight: 700;
+}
+
+.change-link-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(197, 160, 90, .48);
+  box-shadow: 0 14px 28px rgba(79, 60, 34, .14);
+}
+
+.change-link-card:focus-visible {
+  outline: 2px solid #8fb8c8;
+  outline-offset: 2px;
+}
+
 .site-footer {
   border-top: 1px solid rgba(197, 160, 90, .25);
   padding: 42px 0 24px;
@@ -1611,6 +1671,26 @@ a { color: inherit; text-decoration: none; }
   .voices-cta {
     margin-top: 2px;
     margin-bottom: 20px;
+  }
+
+  .change-links {
+    margin-top: 18px;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .change-links-title {
+    margin: 22px 0 10px;
+    font-size: var(--font-sm);
+  }
+
+  .change-link-card {
+    min-height: 64px;
+    padding: 12px 38px 12px 14px;
+  }
+
+  .change-link-card::after {
+    right: 14px;
   }
 
   .kicker {
