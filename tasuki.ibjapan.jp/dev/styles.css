@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --ink: #2f2924;
   --sumi: #473d35;
   --paper: #fbf7f0;
@@ -594,7 +594,7 @@ a { color: inherit; text-decoration: none; }
   z-index: -2;
   background:
     linear-gradient(90deg, rgba(255, 250, 242, .44), rgba(255, 250, 242, .16) 52%, rgba(255, 250, 242, .48)),
-    url("images/hero.png") center top / cover no-repeat;
+    url("images/hero.jpg") center top / cover no-repeat;
   opacity: 1;
 }
 
@@ -774,7 +774,7 @@ a { color: inherit; text-decoration: none; }
 .tech-1 {
   background-image:
     linear-gradient(160deg, rgba(255, 248, 240, .28), rgba(255, 248, 240, .15)),
-    url("images/feature1-gemini.png");
+    url("images/feature1-gemini.jpg");
   background-size: 90%;
   background-position: center 0%;
 }
@@ -790,7 +790,7 @@ a { color: inherit; text-decoration: none; }
 .tech-3 {
   background-image:
     linear-gradient(160deg, rgba(255, 248, 240, .2), rgba(255, 248, 240, .12)),
-    url("images/feature3.png");
+    url("images/feature3.jpg");
   background-position: center 70%;
 }
 
@@ -833,7 +833,7 @@ a { color: inherit; text-decoration: none; }
   border: 1px solid rgba(197, 160, 90, .2);
   background:
     linear-gradient(140deg, rgba(255, 248, 240, .28), rgba(255, 248, 240, .1)),
-    url("images/lesson.png") center 38% / cover no-repeat;
+    url("images/lesson.jpg") center 38% / cover no-repeat;
 }
 
 .gateway .en-title {
@@ -1032,7 +1032,7 @@ a { color: inherit; text-decoration: none; }
 
 .company-list div {
   display: grid;
-  grid-template-columns: 82px 1fr;
+  grid-template-columns: 120px 1fr;
   gap: 10px;
 }
 
@@ -1160,7 +1160,7 @@ a { color: inherit; text-decoration: none; }
   }
 
   .company-list div {
-    grid-template-columns: 74px 1fr;
+    grid-template-columns: 90px 1fr;
     gap: 8px;
   }
 

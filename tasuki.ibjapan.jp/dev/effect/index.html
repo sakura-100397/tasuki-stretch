@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="ja">
 <head>
   <meta charset="utf-8" />
@@ -24,6 +24,7 @@
     .effect-card {
       display: grid;
       grid-template-columns: 300px minmax(0, 1fr);
+      grid-template-rows: auto 1fr;
       align-items: stretch;
       position: relative;
       min-height: 220px;
@@ -54,28 +55,39 @@
     }
 
     .effect-card-image {
+      grid-column: 1;
+      grid-row: 2;
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: 50% 100%;
+      transform: scale(1.15);
       background: rgba(197, 160, 90, .16);
     }
 
+    .effect-card-image[src*="effect_img1"] {
+      object-position: 42% 100%;
+    }
+
     .effect-card-copy {
+      grid-column: 2;
+      grid-row: 2;
       display: grid;
       gap: 10px;
-      padding: 14px 16px;
+      padding: 14px 16px 14px 40px;
       align-content: center;
       justify-items: start;
       text-align: left;
     }
 
     .effect-card-target {
-      position: absolute;
-      top: 14px;
-      left: 0;
+      grid-column: 1;
+      grid-row: 1;
+      position: relative;
       z-index: 2;
       margin: 0;
-      padding: 8px 14px;
+      padding: 8px 32px 8px 14px;
+      width: 360px;
       background: linear-gradient(135deg, rgba(197, 160, 90, .96) 0%, rgba(168, 132, 67, .96) 100%);
       border-radius: 0 999px 999px 0;
       color: #fffaf2;
@@ -84,6 +96,9 @@
       font-weight: 700;
       letter-spacing: 0.04em;
       display: inline-block;
+      align-self: start;
+      white-space: nowrap;
+      text-align: left;
       box-shadow: 0 8px 20px rgba(75, 56, 26, .22);
       text-shadow: 0 1px 1px rgba(58, 43, 18, .35);
     }
@@ -106,28 +121,61 @@
     }
 
     @media (max-width: 980px) {
+      .effect-cards {
+        gap: 24px;
+      }
+
       .effect-card {
         grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
         min-height: auto;
         height: auto;
+        border-radius: 20px;
       }
 
       .effect-card-target {
-        top: 10px;
-        padding: 7px 12px;
+        grid-column: 1 / -1;
+        grid-row: 1;
+        width: 100%;
+        border-radius: 0;
+        padding: 10px 18px;
+        font-size: var(--font-xxs);
+        margin-left: 0;
+        box-shadow: 0 4px 12px rgba(75, 56, 26, .18);
       }
 
       .effect-card-image {
+        grid-column: 1;
+        grid-row: 2;
         height: auto;
-        aspect-ratio: 16 / 9;
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        object-position: center;
+        transform: scale(1);
+        border-radius: 0;
+      }
+
+      .effect-card-image[src*="effect_img1"] {
+        object-position: 80% center;
+      }
+
+      .effect-card-copy {
+        grid-column: 1;
+        grid-row: 3;
+        padding: 20px 18px 22px;
+        gap: 12px;
+        text-align: left;
       }
 
       .effect-card-catch {
-        font-size: var(--font-xl);
+        font-size: var(--font-lg);
+        line-height: 1.45;
       }
 
       .effect-card-reason {
-        font-size: var(--font-xs);
+        font-size: var(--font-sm);
+        line-height: 1.75;
       }
     }
 
@@ -144,13 +192,13 @@
     <div class="container">
       <div class="section-head">
         <h1 class="en-title">効果</h1>
-        <p>TASUKI STRETCH の体感変化と期待できる効果</p>
+        <p>あなたの日々の生活の中で、効果を実感いただけます。</p>
       </div>
 
       <section class="effect-cards" aria-label="ターゲット別の効果">
         <article class="effect-card" id="retry-fitness">
           <span class="effect-card-target">ヨガ・ピラティスとは違い、挫折しない</span>
-          <img class="effect-card-image" src="../images/lp_image_2.png" alt="無理なく続けられる優しいストレッチ" loading="lazy" />
+          <img class="effect-card-image" src="../images/effect_img1.jpg" alt="無理なく続けられる優しいストレッチ" loading="lazy" />
           <div class="effect-card-copy">
             <h2 class="effect-card-catch">「続かなかった私でも続く」に変わる。</h2>
             <p class="effect-card-reason">筋力や運動神経に依存しない設計で、身体に負担をかけずに整えるメソッド。頑張り切れなかった経験がある方でも、初回から変化が見えることで継続の自信を取り戻せます。</p>
@@ -159,7 +207,7 @@
 
         <article class="effect-card" id="work-condition">
           <span class="effect-card-target">仕事のコンディションＵＰ！</span>
-          <img class="effect-card-image" src="../images/lp_image_4.png" alt="一日中快適に働けるコンディション" loading="lazy" />
+          <img class="effect-card-image" src="../images/effect_img2.jpg" alt="一日中快適に働けるコンディション" loading="lazy" />
           <div class="effect-card-copy">
             <h2 class="effect-card-catch">集中力と回復力が上がり、仕事が軽くなる。</h2>
             <p class="effect-card-reason">呼吸と姿勢が整うことで、肩や首の負担が分散。午後のパフォーマンス低下や疲労の蓄積を抑え、オンオフの切り替えもしやすくなります。忙しい時期ほど差が出る変化です。</p>
@@ -168,7 +216,7 @@
 
         <article class="effect-card" id="marriage-activity">
           <span class="effect-card-target">婚活でお相手から褒められる</span>
-          <img class="effect-card-image" src="../images/posture-side.png" alt="お見合いで選ばれる佇まい" loading="lazy" />
+          <img class="effect-card-image" src="../images/effect_img3.jpg" alt="お見合いで選ばれる佇まい" loading="lazy" />
           <div class="effect-card-copy">
             <h2 class="effect-card-catch">第一印象が整い、「また会いたい」に近づく。</h2>
             <p class="effect-card-reason">胸が開き、視線と呼吸が安定することで、緊張時でも自然な会話がしやすくなります。姿勢と表情の印象が変わることで、婚活の場で褒められるポイントが増えていきます。</p>
@@ -177,7 +225,7 @@
 
         <article class="effect-card" id="aging-care">
           <span class="effect-card-target">アクティブに老後を過ごす</span>
-          <img class="effect-card-image" src="../images/posture-front.png" alt="気品ある立ち姿と歩き方" loading="lazy" />
+          <img class="effect-card-image" src="../images/effect_img4.jpg" alt="気品ある立ち姿と歩き方" loading="lazy" />
           <div class="effect-card-copy">
             <h2 class="effect-card-catch">動ける身体と、前向きな気持ちを維持できる。</h2>
             <p class="effect-card-reason">全身の連動を整えることで、歩行や立ち座りが滑らかになり、日常動作の不安を軽減。身体の快適さが増えるほど外出や交流が増え、活力ある毎日を続けやすくなります。</p>
@@ -185,8 +233,8 @@
         </article>
 
         <article class="effect-card" id="photo-video">
-          <span class="effect-card-target">写真・映像での映りが良くなる</span>
-          <img class="effect-card-image" src="../images/lp_image_1.png" alt="写真や映像で印象よく見える立ち姿" loading="lazy" />
+          <span class="effect-card-target">写真や映像の映りが良くなる</span>
+          <img class="effect-card-image" src="../images/effect_img5.jpg" alt="写真や映像で印象よく見える立ち姿" loading="lazy" />
           <div class="effect-card-copy">
             <h2 class="effect-card-catch">画面越しでも「姿勢がきれい」が伝わる。</h2>
             <p class="effect-card-reason">首まわりと胸郭の詰まりが軽減されることで、顔の角度や輪郭の見え方が整いやすくなります。写真・動画・オンライン会議などで、自然体のまま好印象を作れる状態へ導きます。</p>
@@ -195,13 +243,17 @@
 
         <article class="effect-card" id="beauty-health-insight">
           <span class="effect-card-target">美容・健康に関する新しい学びと気付き</span>
-          <img class="effect-card-image" src="../images/lp_image_3.png" alt="内側から輝く美しさ" loading="lazy" />
+          <img class="effect-card-image" src="../images/effect_img6.jpg" alt="内側から輝く美しさ" loading="lazy" />
           <div class="effect-card-copy">
             <h2 class="effect-card-catch">内側から整う実感が、美容と健康の見方を変える。</h2>
             <p class="effect-card-reason">東洋医学の考え方をベースに、呼吸・姿勢・循環の関係を体感的に理解。自分の身体に合う整え方がわかり、日々のセルフケア選びにも納得感が生まれます。</p>
           </div>
         </article>
       </section>
+
+      <div class="voices-cta" style="margin-top: 32px;">
+        <a class="btn" href="https://reserva.be/tasukistretch/reserve?mode=service_staff&search_evt_no=65eJwzNTYyMTUGAAREATc" target="_blank" rel="noopener noreferrer">体験してみる　→</a>
+      </div>
     </div>
   </main>
 
