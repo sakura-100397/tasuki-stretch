@@ -18,9 +18,10 @@
   --gogyo-water: rgba(96, 155, 180, .40);
   --gogyo-silk: rgba(255, 251, 246, .42);
   /* Font sizes */
-  --font-xs: 16px;
-  --font-sm: 16px;
-  --font-base: 17px;
+  --font-xxs: 18px;
+  --font-xs: 18px;
+  --font-sm: 18px;
+  --font-base: 18px;
   --font-md: 18px;
   --font-lg: 20px;
   --font-xl: 24px;
@@ -41,6 +42,7 @@ body {
     radial-gradient(circle at 50% 0%, rgba(255, 255, 255, .36), transparent 54%),
     linear-gradient(180deg, #fffaf6 0%, var(--paper) 42%, #f7efe4 100%);
   font-family: "Yu Mincho", "Hiragino Mincho ProN", "Yu Gothic", "Hiragino Sans", "Noto Sans JP", serif;
+  font-size: 18px;
   line-height: 1.85;
   letter-spacing: .02em;
 }
@@ -1107,7 +1109,7 @@ a { color: inherit; text-decoration: none; }
 
 .voice-stars {
   color: var(--gold);
-  font-size: 16px;
+  font-size: 18px;
   letter-spacing: .06em;
   margin-bottom: 12px;
 }
@@ -1115,7 +1117,7 @@ a { color: inherit; text-decoration: none; }
 .voice-text {
   margin: 0 0 16px;
   color: #3f382f;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.85;
 }
 
@@ -1160,8 +1162,12 @@ a { color: inherit; text-decoration: none; }
   }
 
   .company-list div {
-    grid-template-columns: 90px 1fr;
+    grid-template-columns: 120px minmax(0, 1fr);
     gap: 8px;
+  }
+
+  .company-list dt {
+    white-space: nowrap;
   }
 
   .voice-card {
@@ -1212,7 +1218,7 @@ a { color: inherit; text-decoration: none; }
   }
 
   .brand {
-    font-size: 16px;
+    font-size: 18px;
     gap: 8px;
   }
 
@@ -1296,7 +1302,7 @@ a { color: inherit; text-decoration: none; }
   max-width: 680px;
   margin: 0 auto 48px;
   color: rgba(71, 61, 53, .82);
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.9;
   letter-spacing: .02em;
   text-align: center;
@@ -1378,6 +1384,43 @@ a { color: inherit; text-decoration: none; }
   font-size: var(--font-xs);
   font-weight: 400;
   letter-spacing: .06em;
+}
+
+.plan-unit-price {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: 10px 0 0;
+  padding: 7px 12px;
+  border-radius: 8px;
+  background: rgba(143, 175, 155, .13);
+  color: rgba(71, 61, 53, .84);
+  font-size: var(--font-xs);
+  line-height: 1.45;
+  letter-spacing: .04em;
+}
+
+.plan-unit-price strong {
+  color: var(--matcha);
+  font-size: var(--font-lg);
+  line-height: 1;
+}
+
+.plan-card--featured .plan-unit-price {
+  background: rgba(197, 160, 90, .15);
+}
+
+.plan-card--featured .plan-unit-price strong {
+  color: var(--gold);
+}
+
+.plan-value-note {
+  margin: 10px 0 0;
+  color: #8a6b32;
+  font-size: var(--font-xs);
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: .04em;
 }
 
 .plan-features {
@@ -1723,7 +1766,7 @@ a { color: inherit; text-decoration: none; }
     bottom: 24px;
     min-height: 66px;
     padding: 0 24px;
-    font-size: 17px;
+    font-size: 18px;
   }
 }
 
