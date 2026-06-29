@@ -1,0 +1,313 @@
+﻿<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="TASUKI STRETCH の効果ページ" />
+  <title>効果 | TASUKI STRETCH</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    .effect-lead {
+      margin: 0;
+      color: rgba(71, 61, 53, .86);
+      font-size: var(--font-sm);
+      line-height: 1.9;
+    }
+
+    .effect-cards {
+      margin-top: 22px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
+    .effect-card {
+      display: grid;
+      grid-template-columns: 300px minmax(0, 1fr);
+      grid-template-rows: auto 1fr;
+      align-items: stretch;
+      position: relative;
+      min-height: 220px;
+      scroll-margin-top: 110px;
+      overflow: hidden;
+      border: 1px solid rgba(197, 160, 90, .24);
+      border-radius: 16px;
+      background: rgba(255, 253, 248, .94);
+      box-shadow: 0 10px 24px rgba(70, 55, 38, .08);
+    }
+
+    @media (min-width: 981px) {
+      .effect-card {
+        opacity: 0;
+        transform: translateX(44px);
+        transition: opacity .7s ease, transform .7s ease;
+      }
+
+      .effect-card.is-visible {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .effect-card.is-target {
+      border-color: rgba(197, 160, 90, .62);
+      box-shadow: 0 16px 34px rgba(122, 87, 34, .2);
+    }
+
+    .effect-card-image {
+      grid-column: 1;
+      grid-row: 2;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 100%;
+      transform: scale(1.15);
+      background: rgba(197, 160, 90, .16);
+    }
+
+    .effect-card-image[src*="effect_img1"] {
+      object-position: 42% 100%;
+    }
+
+    .effect-card-copy {
+      grid-column: 2;
+      grid-row: 2;
+      display: grid;
+      gap: 10px;
+      padding: 14px 16px 14px 40px;
+      align-content: center;
+      justify-items: start;
+      text-align: left;
+    }
+
+    .effect-card-target {
+      grid-column: 1;
+      grid-row: 1;
+      position: relative;
+      z-index: 2;
+      margin: 0;
+      padding: 8px 32px 8px 14px;
+      width: 360px;
+      background: linear-gradient(135deg, rgba(197, 160, 90, .96) 0%, rgba(168, 132, 67, .96) 100%);
+      border-radius: 0 999px 999px 0;
+      color: #fffaf2;
+      font-size: var(--font-xs);
+      line-height: 1.55;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      display: inline-block;
+      align-self: start;
+      white-space: nowrap;
+      text-align: left;
+      box-shadow: 0 8px 20px rgba(75, 56, 26, .22);
+      text-shadow: 0 1px 1px rgba(58, 43, 18, .35);
+    }
+
+    .effect-card-catch {
+      margin: 0;
+      color: #9d4f62;
+      font-size: var(--font-xl);
+      line-height: 1.35;
+      font-weight: 700;
+      width: 100%;
+    }
+
+    .effect-card-reason {
+      margin: 0;
+      color: rgba(71, 61, 53, .84);
+      font-size: var(--font-xs);
+      line-height: 1.6;
+      width: 100%;
+    }
+
+    @media (max-width: 980px) {
+      .effect-cards {
+        gap: 24px;
+      }
+
+      .effect-card {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        min-height: auto;
+        height: auto;
+        border-radius: 20px;
+      }
+
+      .effect-card-target {
+        grid-column: 1 / -1;
+        grid-row: 1;
+        width: 100%;
+        border-radius: 0;
+        padding: 10px 18px;
+        font-size: var(--font-xxs);
+        margin-left: 0;
+        box-shadow: 0 4px 12px rgba(75, 56, 26, .18);
+      }
+
+      .effect-card-image {
+        grid-column: 1;
+        grid-row: 2;
+        height: auto;
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        object-position: center;
+        transform: scale(1);
+        border-radius: 0;
+      }
+
+      .effect-card-image[src*="effect_img1"] {
+        object-position: 80% center;
+      }
+
+      .effect-card-copy {
+        grid-column: 1;
+        grid-row: 3;
+        padding: 20px 18px 22px;
+        gap: 12px;
+        text-align: left;
+      }
+
+      .effect-card-catch {
+        font-size: var(--font-lg);
+        line-height: 1.45;
+      }
+
+      .effect-card-reason {
+        font-size: var(--font-sm);
+        line-height: 1.75;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div id="shared-menu" data-menu-src="../partials/menu.html" data-base-prefix="../"></div>
+    </div>
+  </header>
+
+  <main class="section subpage-main">
+    <div class="container">
+      <div class="section-head">
+        <h1 class="en-title">効果</h1>
+        <p>あなたの日々の生活の中で、効果を実感いただけます。</p>
+      </div>
+
+      <section class="effect-cards" aria-label="ターゲット別の効果">
+        <article class="effect-card" id="retry-fitness">
+          <span class="effect-card-target">ヨガ・ピラティスとは違い、挫折しない</span>
+          <img class="effect-card-image" src="../images/effect_img1.jpg" alt="無理なく続けられる優しいストレッチ" loading="lazy" />
+          <div class="effect-card-copy">
+            <h2 class="effect-card-catch">運動が苦手でも、無理なく続けられる。</h2>
+            <p class="effect-card-reason">激しい動きや柔軟性の高さを必要とせず、たすきが身体の使い方を自然にナビゲート。力で頑張るのではなく、呼吸と姿勢の感覚を取り戻すので、運動が苦手な方でも「これなら続けられる」という手応えを感じやすくなります。</p>
+          </div>
+        </article>
+
+        <article class="effect-card" id="work-condition">
+          <span class="effect-card-target">仕事のコンディションＵＰ！</span>
+          <img class="effect-card-image" src="../images/effect_img2.jpg" alt="一日中快適に働けるコンディション" loading="lazy" />
+          <div class="effect-card-copy">
+            <h2 class="effect-card-catch">肩・首・背中を整え、仕事中の疲れをためにくく。</h2>
+            <p class="effect-card-reason">デスクワークで固まりやすい肩・首・背中を、呼吸が入りやすい位置へリセット。姿勢が整うと余計な力みが抜け、午後の集中力や終業後の余力に差が出ます。忙しい人ほど価値を感じやすい、仕事のためのコンディショニングです。</p>
+          </div>
+        </article>
+
+        <article class="effect-card" id="marriage-activity">
+          <span class="effect-card-target">婚活でお相手から褒められる</span>
+          <img class="effect-card-image" src="../images/effect_img3.jpg" alt="お見合いで選ばれる佇まい" loading="lazy" />
+          <div class="effect-card-copy">
+            <h2 class="effect-card-catch">姿勢と表情が整い、婚活で好印象に。</h2>
+            <p class="effect-card-reason">お見合いやデートでは、姿勢・視線・呼吸の落ち着きがそのまま印象に表れます。胸が自然に開くことで表情まで明るく見え、自分らしく会話に向き合える状態へ。外見だけでなく「感じの良さ」まで整えていきます。</p>
+          </div>
+        </article>
+
+        <article class="effect-card" id="aging-care">
+          <span class="effect-card-target">アクティブに老後を過ごす</span>
+          <img class="effect-card-image" src="../images/effect_img4.jpg" alt="気品ある立ち姿と歩き方" loading="lazy" />
+          <div class="effect-card-copy">
+            <h2 class="effect-card-catch">歩く・立つ・座るを、今より軽やかに。</h2>
+            <p class="effect-card-reason">年齢を重ねても、歩く・立つ・座るが軽やかだと毎日の行動範囲は広がります。全身のつながりを整え、無理なく動ける感覚を育てることで、外出や人との時間を楽しむ前向きさを支えます。未来の自分への投資になるケアです。</p>
+          </div>
+        </article>
+
+        <article class="effect-card" id="photo-video">
+          <span class="effect-card-target">写真や映像の映りが良くなる</span>
+          <img class="effect-card-image" src="../images/effect_img5.jpg" alt="写真や映像で印象よく見える立ち姿" loading="lazy" />
+          <div class="effect-card-copy">
+            <h2 class="effect-card-catch">写真や動画で、姿勢よくきれいに映る。</h2>
+            <p class="effect-card-reason">写真や動画で差が出るのは、顔だけでなく首・肩・背中のライン。胸郭まわりがほどけると顔の角度や表情が自然に整いやすく、オンライン会議やプロフィール写真でも好印象に。作り込まずに映える土台をつくります。</p>
+          </div>
+        </article>
+
+        <article class="effect-card" id="beauty-health-insight">
+          <span class="effect-card-target">美容・健康に関する新しい学びと気付き</span>
+          <img class="effect-card-image" src="../images/effect_img6.jpg" alt="内側から輝く美しさ" loading="lazy" />
+          <div class="effect-card-copy">
+            <h2 class="effect-card-catch">自分の身体に合うケアがわかる。</h2>
+            <p class="effect-card-reason">東洋医学の視点をもとに、呼吸・姿勢・巡りがつながっていることを身体で理解できます。自分の不調や美容習慣を「なんとなく」ではなく理由から見直せるようになり、日々のセルフケアに確かな選択軸が生まれます。</p>
+          </div>
+        </article>
+      </section>
+
+      <div class="voices-cta" style="margin-top: 32px;">
+        <a class="btn" href="https://reserva.be/tasukistretch/reserve?mode=service_staff&search_evt_no=13eJwzNTa3MDIHAARiAUE" target="_blank" rel="noopener noreferrer">体験してみる　→</a>
+      </div>
+    </div>
+  </main>
+
+  <div id="shared-footer" data-footer-src="../partials/footer.html" data-base-prefix="../"></div>
+  <script src="../menu-loader.js" defer></script>
+  <script src="../footer-loader.js" defer></script>
+  <script>
+    function initEffectCardReveal() {
+      if (window.matchMedia("(max-width: 980px)").matches) return;
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        document.querySelectorAll(".effect-card").forEach((card) => card.classList.add("is-visible"));
+        return;
+      }
+
+      const cards = document.querySelectorAll(".effect-card");
+      if (!cards.length) return;
+
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-visible");
+          obs.unobserve(entry.target);
+        });
+      }, {
+        root: null,
+        threshold: 0.22
+      });
+
+      cards.forEach((card, index) => {
+        card.style.transitionDelay = `${index * 0.07}s`;
+        observer.observe(card);
+      });
+    }
+
+    function scrollToHashCard() {
+      if (!window.location.hash) return;
+      const target = document.querySelector(window.location.hash);
+      if (!target || !target.classList.contains("effect-card")) return;
+
+      target.classList.add("is-target");
+      setTimeout(() => target.classList.remove("is-target"), 1600);
+
+      // fixed header offset
+      const header = document.querySelector(".site-header");
+      const headerHeight = header ? header.offsetHeight : 0;
+      const top = target.getBoundingClientRect().top + window.scrollY - headerHeight - 18;
+      window.scrollTo({ top, behavior: "smooth" });
+    }
+
+    window.addEventListener("DOMContentLoaded", () => {
+      initEffectCardReveal();
+      setTimeout(scrollToHashCard, 120);
+    });
+    window.addEventListener("hashchange", scrollToHashCard);
+  </script>
+</body>
+</html>

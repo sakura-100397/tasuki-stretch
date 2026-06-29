@@ -1,463 +1,199 @@
 <!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TASUKI STRETCH | タスキストレッチ</title>
-  <meta name="description" content="美しく、しなやかに、私を整える。東洋医学の経絡の考え方を美容コンディショニングに応用した、たすきを使うストレッチ『TASUKI STRETCH（タスキストレッチ）』。" />
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NSKCSJ3MEB"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-NSKCSJ3MEB');
-  </script>
-
-  <link rel="stylesheet" href="styles.css" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="日本古来のタスキを用いて身体と心を整える、タスキストレッチのサービスブランドページ。" />
+	<title>トップ | TASUKI STRETCH</title>
+	<link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="topbar">
-    <div class="container nav">
-      <a class="brand" href="#top" aria-label="TASUKI STRETCH top">
-        <img class="brand-mark" src="image/tasuki-logo.png" alt="TASUKI STRETCH ロゴ" />
-        <span>TASUKI STRETCH</span>
-      </a>
-      <nav class="nav-links" aria-label="ページ内ナビゲーション">
-        <a href="#about">タスキストレッチ</a>
-        <a href="#menu">料金</a>
-        <a href="#before-after">Before/After</a>
-        <a href="#faq">FAQ</a>
-        <a class="btn" 
-          href="https://reserva.be/tasukistretch/reserve?mode=service_staff&search_evt_no=65eJwzNTYyMTUGAAREATc"  
-          onclick="gtag('event', 'click_reserva', {
-            event_category: 'outbound',
-            event_label: 'reserve_button'
-          });">体験予約</a>
-      </nav>
-    </div>
-  </header>
+	<div class="obi-opening" aria-hidden="true">
+		<div class="obi-band" style="--obi-color: rgba(214, 109, 125, .90); --obi-dir: -1;"></div>
+		<div class="obi-band" style="--obi-color: rgba(198, 146, 64, .88); --obi-dir: 1;"></div>
+		<div class="obi-band" style="--obi-color: rgba(104, 156, 123, .88); --obi-dir: -1;"></div>
+		<div class="obi-band" style="--obi-color: rgba(96, 155, 180, .88); --obi-dir: 1;"></div>
+		<div class="obi-band" style="--obi-color: rgba(200, 188, 171, .88); --obi-dir: -1;"></div>
+		<img class="obi-logo" src="images/tasuki-logo.png" alt="TASUKI STRETCH" />
+	</div>
 
-  <main id="top">
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <span class="eyebrow">TASUKI STRETCH</span>
-          <h1>
-            美しく、<br />しなやかに、<br />私を整える。
-            <span class="small">たすきでめぐる、<br />美容コンディショニング</span>
-          </h1>
-          <div class="hero-actions">
-            <a class="btn gold"   
-              href="https://reserva.be/tasukistretch/reserve?mode=service_staff&search_evt_no=65eJwzNTYyMTUGAAREATc"  
-              onclick="gtag('event', 'click_reserva', {
-                event_category: 'outbound',
-                event_label: 'reserve_button'
-                });"
-              >初回体験を予約する</a>
-            <a class="btn subtle" href="#menu">メニューを見る</a>
-          </div>
-          <p class="note">※医療行為・治療・痩身効果を保証するサービスではありません。<br />姿勢意識・美容意識・コンディションづくりをサポートするレッスンです。</p>
-        </div>
+	<div class="site-bg" aria-hidden="true">
+		<canvas id="flow-canvas"></canvas>
+		<div class="bg-noise"></div>
+	</div>
 
-        <div class="hero-photo-card">
-          <img src="image/lp_image_1.png" alt="たすきを使って肩まわりを整えるタスキストレッチのイメージ" />
-        </div>
-      </div>
-    </section>
+	<header class="site-header">
+		<div class="header-inner">
+			<div id="shared-menu" data-menu-src="partials/menu.html" data-base-prefix=""></div>
+		</div>
+	</header>
 
-<section class="section" id="problems">
-  <div class="container">
-    <div class="section-title">
-      <span class="en">Body Signs</span>
-      <h2>こんなお悩みありませんか。</h2>
-      <p>
-        年齢とともにでやすい変化。<br />
-        運動をしても変化しにくい身体。
-      </p>
-    </div>
+	<main id="top">
+		<section class="hero container" aria-label="ファーストビュー">
+			<div class="hero-inner">
+				<span class="kicker" data-hero-step>日本古来の美と健康メソッド</span>
+				<h1 data-hero-step>真の美しさは、作るのではなく、<br />「引き出す」</h1>
+				<p class="hero-sub" data-hero-step>長い歴史の中に、美と健康のヒントを得た。</p>
+			</div>
+		</section>
 
-    <div class="problem-box">
-      <div class="check-grid">
-        <div class="check-item">
-          <span class="check-icon">✓</span>
-          <span>猫背や巻き肩が気になる</span>
-        </div>
-        <div class="check-item">
-          <span class="check-icon">✓</span>
-          <span>横から見たときに、<br />顔が前に出ている気がする</span>
-        </div>
-        <div class="check-item">
-          <span class="check-icon">✓</span>
-          <span>二の腕のたるみが気になる</span>
-        </div>
-        <div class="check-item">
-          <span class="check-icon">✓</span>
-          <span>ブラの上や腰回りに贅肉がついてきた</span>
-        </div>
-        <div class="check-item">
-          <span class="check-icon">✓</span>
-          <span>前まで履けていたズボンが、<br />最近きつく感じる</span>
-        </div>
+		<section class="section" id="challenge" aria-labelledby="challenge-title">
+			<div class="container grid-2">
+				<h2 class="en-title label-vertical en" data-reveal><span>美容・健康でムリ</span><span>をしてきた現代人</span></h2>
+				<div class="manifesto-copy" id="challenge-title">
+					<p class="fade-line">ピラティスやジムは欧米由来のトレーニング法。ヨガも同じく鍛錬の方法論です。
+						筋肉トレーニングは、効果が出るまでに時間がかかる一方、止めると直ぐに元に戻ります。</p>
+					<p class="fade-line">飲みながら変える、サプリやプロテインにも同じことが言えます。</p>
+					<p class="fade-line">私たちは、そのアプローチが本当に正しいのか？を考え続けてきました。</p>
+				</div>
+			</div>
+		</section>
 
-        <div class="check-item">
-          <span class="check-icon">✓</span>
-          <span>下腹まわりがすっきり見えにくくなってきた</span>
-        </div>
-        <div class="check-item">
-          <span class="check-icon">✓</span>
-          <span>夕方になるとむくみが気になり、<br />足首がぼやける</span>
-        </div>
-        <div class="check-item">
-          <span class="check-icon">✓</span>
-          <span>寝ても疲れが抜けにくく、<br />表情まで重く見える気がする</span>
-        </div>
-        <div class="check-item">
-          <span class="check-icon">✓</span>
-          <span>顔のたるみやフェイスラインのもたつきが気になってきた</span>
-        </div>
-      </div>
-    </div>
-  </div>
-<div class="problem-cta">
-  <h3>
-    タスキストレッチで、<br />
-    “整えて”みませんか？
-  </h3>
-  <p>
-    姿勢・巡り・身体感覚にやさしく向き合いながら、<br />
-    今の自分を心地よく整える時間を。
-  </p>
-  <a class="btn gold problem-cta__btn"   
-    href="https://reserva.be/tasukistretch/reserve?mode=service_staff&search_evt_no=65eJwzNTYyMTUGAAREATc"  
-    onclick="gtag('event', 'click_reserva', {
-      event_category: 'outbound',
-      event_label: 'reserve_button'
-  });"
-    >
-    初回体験を予約する
-  </a>
-</div>
-</section>
+		<section class="section setbacks" id="setbacks" aria-labelledby="setbacks-title">
+			<div class="container">
+				<div class="section-head" data-reveal>
+					<h2 class="en-title" id="setbacks-title">皆様から聞く挫折談</h2>
+					<p>多くの方が一度は感じる、つまずき</p>
+				</div>
+				<div class="setback-grid">
+					<article class="setback-card" data-reveal>
+						<h3>続かない</h3>
+						<p>トレーニングがキツく、習慣化できずに終わってしまう。</p>
+					</article>
+					<article class="setback-card" data-reveal>
+						<h3>実感が遅い</h3>
+						<p>頑張っても変化を感じにくく、不安が先に立ってしまう。</p>
+					</article>
+					<article class="setback-card" data-reveal>
+						<h3>時間が足りない</h3>
+						<p>仕事や家事で後回しになり、ケアの優先順位が下がる。</p>
+					</article>
+					<article class="setback-card" data-reveal>
+						<h3>情報が多すぎる</h3>
+						<p>何が自分に合うのか分からず、選べないまま止まってしまう。</p>
+					</article>
+				</div>
+			</div>
+		</section>
 
+		<section class="section" id="manifesto" aria-labelledby="manifesto-title">
+			<div class="container grid-2">
+				<h2 class="en-title label-vertical en" data-reveal>タスキ ストレッチで</br>「変わる」</h2>
+				<div class="manifesto-copy" id="manifesto-title">
+					<p class="fade-line">タスキ ストレッチは、東洋医学の考え方を基に、日本が古来から用いる"たすき"の力を使い、全身を本来の美しい状態に戻すアプローチです。</p>
+					<p class="fade-line">筋肉を鍛える、サプリを飲む、のように時間をかけて身体を局所的にコントロールするのではありません。</p>
+					<p class="fade-line">西洋医学は「名前のない不調」へ対処する術を持ちませんが、タスキ ストレッチは全身と心のめぐりを整え「なぜか辛い」も和らげます。</p>
+				</div>
+			</div>
+		</section>
 
-    <section class="section image-showcase-section">
-      <div class="container">
-        <div class="showcase-copy">
-          <span class="eyebrow">Lesson image</span>
-            <figure class="wide-photo">
-              <img src="image/lp_image_2.png" alt="少人数で椅子を使いながら行うタスキストレッチのレッスン風景" />
-            </figure>
-        </div>
-      </div>
-    </section>
+		<div class="container manifesto-effect-cta" data-reveal>
+			<a class="btn" href="effect/index.html">効果を見る　→</a>
+			<a class="btn" href="https://reserva.be/tasukistretch/reserve?mode=service_staff&search_evt_no=13eJwzNTa3MDIHAARiAUE" target="_blank" rel="noopener noreferrer">体験してみる　→</a>
+		</div>
 
-   <section class="section" id="about">
-  <div class="container story">
-    <div>
-      <span class="eyebrow">About TASUKI STRETCH</span>
-      <h2>タスキ<br />ストレッチとは</h2>
-      <p>
-        タスキストレッチは、東洋医学の「経絡」の考え方を取り入れた、たすきを使うストレッチです。
-        身体を強く鍛えるのではなく、呼吸・姿勢・身体感覚にやさしく意識を向けながら、
-        自分らしく美しく整う時間を大切にしています。
-      </p>
-    </div>
+		<section class="section" id="technology" aria-labelledby="technology-title">
+			<div class="container">
+				<div class="section-head" data-reveal>
+					  <h2 class="en-title" id="technology-title">何が「変わる」のか</h2>
+					  <p>効果が直ぐに出る / 手軽に参加できる / 気持ちが落ち着く</p>
+				</div>
 
-    <div class="story-list">
-      <div>
-        <strong>“経絡”＋“ストレッチ”</strong>
-        “経絡”とは、気や巡りの流れを整える通り道と考えられているものです。
-        簡単なストレッチで経絡を整え、姿勢や立ち姿、見た目の印象の変化に気づきながら、
-        自分らしく美しく整う時間を提供します。
-      </div>
-      <div>
-        <strong>“たすき”の意味</strong>
-        古くから日本の暮らしに根づく、和風文化の象徴を着想にしています。
-        たすきを通じて、姿勢・巡り・気持ちを整える時間を大切にしています。
-      </div>
-    </div>
-  </div>
-</section>
+				<div class="tech-grid">
+					<article class="tech-card" data-reveal>
+						<div class="tech-media tech-1" role="img" aria-label="生薬を抽象化した立体表現"></div>
+						<div class="tech-body">
+							  <h3>効果が直ぐに出る</h3>
+							<p>一回の体験でも、目に見えるほどの変化を実感。回を重ねると、あなたの周囲の人も変化に気付き始めます。</p>
+						</div>
+					</article>
 
-<section class="section" id="reason">
-  <div class="container">
-    <div class="section-title">
-      <span class="en">Reason</span>
-      <h2>タスキストレッチが<br />選ばれる理由</h2>
-    </div>
+					<article class="tech-card" data-reveal>
+						<div class="tech-media tech-2" role="img" aria-label="経絡を模した光の抽象ライン"></div>
+						<div class="tech-body">
+							  <h3>手軽に参加できる</h3>
+							<p>専用の道具やウェアは不要。空いた時間にサクッと参加できます。あまり汗をかくこともなく、着替えの準備も不要です。</p>
+						</div>
+					</article>
 
-    <div class="feature-grid reason-grid">
-      <article class="feature-card reason-card" style="--bg-image: url('image/lp_image_2.png');">
-        <div class="feature-number">01</div>
-        <h3>運動が苦手でも続けやすい</h3>
-        <p>
-          たすきを使って無理なく身体を動かすストレッチなので、
-          運動が苦手な方でも気軽に続けやすい内容です。
-        </p>
-      </article>
+					<article class="tech-card" data-reveal>
+						<div class="tech-media tech-3" role="img" aria-label="気血水の巡りを示す粒子の流れ"></div>
+						<div class="tech-body">
+							  <h3>気持ちが落ち着く</h3>
+							<p>物理的な作用として、肩甲骨が寄り、胸を大きく開きます。これにより、呼吸が深くなり、心身のリラックスを促します。</p>
+						</div>
+					</article>
+				</div>
 
-      <article class="feature-card reason-card" style="--bg-image: url('image/lp_image_1.png');">
-        <div class="feature-number">02</div>
-        <h3>その場で変化を体感しやすい</h3>
-        <p>
-          レッスン前後で姿勢や見た目、身体の軽さを確認するため、
-          ご自身の身体の変化に気づきやすい構成です。
-        </p>
-      </article>
+				<h3 class="change-links-title" data-reveal>さらには、</h3>
 
-      <article class="feature-card reason-card" style="--bg-image: url('image/lp_image_2.png');">
-        <div class="feature-number">03</div>
-        <h3>スキマ時間で簡単に取り入れやすい</h3>
-        <p>
-          必要なのは、たすきだけ。<br />
-          身体一つで始められるので、日常のすきま時間にも取り入れやすいレッスンです。
-        </p>
-      </article>
+				<div class="change-links" data-reveal>
+					<a class="change-link-card" href="effect/index.html#retry-fitness">ヨガ・ピラティスとは違い、挫折しない</a>
+					<a class="change-link-card" href="effect/index.html#work-condition">仕事のコンディションＵＰ！</a>
+					<a class="change-link-card" href="effect/index.html#marriage-activity">婚活でお相手から褒められる</a>
+					<a class="change-link-card" href="effect/index.html#aging-care">アクティブに老後を過ごす</a>
+					<a class="change-link-card" href="effect/index.html#photo-video">写真や映像の映りが良くなる</a>
+					<a class="change-link-card" href="effect/index.html#beauty-health-insight">美容・健康に関する新しい学びと気付き</a>
+				</div>
+			</div>
+		</section>
 
-      <article class="feature-card reason-card" style="--bg-image: url('image/lp_image_1.png');">
-        <div class="feature-number">04</div>
-        <h3>自分自身を知るきっかけになる</h3>
-        <p>
-          マンツーマンレッスンでインストラクターとの距離が近く、
-          身近なお悩みや身体の状態を相談しながら、
-          姿勢や見た目の変化を個別に確認できます。
-        </p>
-      </article>
-    </div>
-  </div>
-</section>
+		<section class="section voices" id="voices" aria-labelledby="voices-title">
+			<div class="container">
+				<div class="section-head" data-reveal>
+					<h2 class="en-title" id="voices-title">お客様の声</h2>
+					<p>ご利用いただいた方々からのご感想</p>
+				</div>
+				<div class="voices-track" role="region" aria-label="お客様の声カルーセル">
+					<article class="voice-card">
+						<div class="voice-stars">★★★★★</div>
+						<p class="voice-text">「たった1回のレッスンで、鏡の前に立つ姿勢が全然変わりました。自分でもびっくりするくらい、呼吸が深くなった気がします。」</p>
+						<div class="voice-author"><div class="voice-avatar" aria-hidden="true"></div><span>30代・女性 / 東京都</span></div>
+					</article>
+					<article class="voice-card">
+						<div class="voice-stars">★★★★★</div>
+						<p class="voice-text">「猫背をずっと気にしていたのですが、施術後に歩き方が軽くなって、仕事帰りの疲れ方が明らかに違いました。」</p>
+						<div class="voice-author"><div class="voice-avatar" aria-hidden="true"></div><span>40代・女性 / 神奈川県</span></div>
+					</article>
+					<article class="voice-card">
+						<div class="voice-stars">★★★★☆</div>
+						<p class="voice-text">「ヨガやピラティスとは全く別のアプローチ。身体の内側から整っていく感覚が新鮮でした。また通いたいと思います。」</p>
+						<div class="voice-author"><div class="voice-avatar" aria-hidden="true"></div><span>30代・女性 / 埼玉県</span></div>
+					</article>
+					<article class="voice-card">
+						<div class="voice-stars">★★★★★</div>
+						<p class="voice-text">「顔のむくみが気になっていたのですが、首まわりを整えるだけでこんなに変わるとは。友人にも勧めたいです。」</p>
+						<div class="voice-author"><div class="voice-avatar" aria-hidden="true"></div><span>50代・女性 / 東京都</span></div>
+					</article>
+					<article class="voice-card">
+						<div class="voice-stars">★★★★★</div>
+						<p class="voice-text">「緊張しやすい体質でしたが、身体を整えてから人に会うと不思議と気持ちが落ち着きました。定期的に通っています。」</p>
+						<div class="voice-author"><div class="voice-avatar" aria-hidden="true"></div><span>40代・男性 / 千葉県</span></div>
+					</article>
+					<article class="voice-card">
+						<div class="voice-stars">★★★★★</div>
+						<p class="voice-text">「お見合い前日に体験しました。当日、姿勢がいいねと言われてびっくり。内面から変わる感覚が忘れられません。」</p>
+						<div class="voice-author"><div class="voice-avatar" aria-hidden="true"></div><span>30代・女性 / 東京都</span></div>
+					</article>
+					<article class="voice-card">
+						<div class="voice-stars">★★★★☆</div>
+						<p class="voice-text">「筋力ゼロでも大丈夫と言われた通り、まったく辛くなかったです。60分があっという間で、スッキリして帰れました。」</p>
+						<div class="voice-author"><div class="voice-avatar" aria-hidden="true"></div><span>40代・女性 / 神奈川県</span></div>
+					</article>
+				</div>
+			</div>
+		</section>
 
-<section class="section trial-section" id="triallesson">
-  <div class="container">
-    <div class="trial-box">
-      <!--<div class="trial-badge">
-        <span>FREE</span>
-        <strong>0円</strong>
-      </div> -->
+		<div class="container voices-cta" data-reveal>
+			<a class="btn" href="https://reserva.be/tasukistretch/reserve?mode=service_staff&search_evt_no=13eJwzNTa3MDIHAARiAUE" target="_blank" rel="noopener noreferrer">体験してみる　→</a>
+		</div>
 
-      <div class="trial-box__content">
-        <span class="trial-en">TRIAL LESSON</span>
-        <p class="trial-mini">割引きキャンペーン中</p>
+	</main>
 
-        <h2>初回体験レッスン</h2>
+	<div id="shared-footer" data-footer-src="partials/footer.html" data-base-prefix=""></div>
 
-        <p class="trial-lead">
-          はじめての方でも安心してご参加いただけるよう、<br>
-          初回体験レッスンをご案内しています。
-        </p>
-
-        <p class="trial-text">
-          まずは、たすきを使ったストレッチの心地よさや、<br>
-          レッスン前後の身体感覚の変化をご体感ください。
-        </p>
-
-        <div class="trial-tags">
-          <span>レッスンの雰囲気を体験</span>
-          <span>姿勢・身体感覚をチェック</span>
-          <span>無理なく始められる内容</span>
-        </div>
-
-        <a class="btn gold trial-btn"   
-          href="https://reserva.be/tasukistretch/reserve?mode=service_staff&search_evt_no=65eJwzNTYyMTUGAAREATc"  
-          onclick="gtag('event', 'click_reserva', {
-            event_category: 'outbound',
-            event_label: 'reserve_button'
-            });"
-          >
-          初回体験を予約する
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="menu">
-  <div class="container">
-    <div class="section-title">
-      <span class="en">Course & Price</span>
-      <h2>本来の自分へ整える<br />月額レッスンコース</h2>
-      <p>
-        タスキストレッチは、継続することで姿勢・呼吸・身体感覚への気づきを日常に育てていくレッスンです。
-        <br />目的やライフスタイルに合わせて、月4回・月2回・月1回からお選びいただけます。
-      </p>
-    </div>
-
-    <div class="menu-grid">
-      <article class="menu-card">
-        <span class="label rose">メンテナンス</span>
-        <h3>月いちメンテナンス</h3>
-        <p>
-          忙しい方や、まずは自分のペースで身体を整えたい方へ。
-          月に一度、姿勢や巡りの感覚を見直すメンテナンスコースです。
-        </p>
-        <div class="price"><strong>8,800</strong><span>円 / 月 税込</span></div>
-        <ul class="menu-list">
-          <li>月1回レッスン</li>
-          <li>姿勢・呼吸・身体感覚の確認</li>
-          <li>月1回の美容メンテナンスにおすすめ</li>
-        </ul>
-      </article>
-
-      <article class="menu-card recommend">
-        <span class="label gold">一番おすすめ</span>
-        <h3>週いち標準コース</h3>
-        <p>
-          しなやかで美しい巡りを習慣にしたい方へ。
-          週1回ペースで身体に向き合い、姿勢・印象・コンディションを継続的に整えていくおすすめコースです。
-        </p>
-        <div class="price"><strong>17,600</strong><span>円 / 月 税込</span></div>
-        <ul class="menu-list">
-          <li>月4回レッスン</li>
-          <li>週1回ペースでしっかり習慣化</li>
-          <li>姿勢・可動域・体感の継続チェック</li>
-          <li>はじめて継続する方にも一番おすすめ</li>
-        </ul>
-      </article>
-
-      <article class="menu-card">
-        <span class="label">無理なく継続</span>
-        <h3>隔週整えコース</h3>
-        <p>
-          月2回のペースで、無理なく身体を整えたい方へ。
-          忙しい毎日の中でも、定期的に自分の身体と向き合う時間をつくります。
-        </p>
-        <div class="price"><strong>12,100</strong><span>円 / 月 税込</span></div>
-        <ul class="menu-list">
-          <li>月2回レッスン</li>
-          <li>隔週ペースで無理なく継続</li>
-          <li>姿勢・呼吸・巡りの感覚を整える</li>
-        </ul>
-      </article>
-    </div>
-
-    <p class="note" style="text-align:center;margin-top:22px;">
-      ※入会金は通常33,000円(税込)です。初回体験レッスン時にコースへお申し込みいただいた方は、入会金は無料となります。<br />
-      　なお、6ヶ月間の継続利用が入会金無料の適用条件となります。6ヶ月間の継続利用を希望されない場合は、入会金33,000円(税込)をお支払いいただきます。
-    </p>
-  </div>
-</section>
-    <section class="section before-after-section" id="before-after">
-      <div class="container">
-        <div class="section-title">
-          <span class="en">Before / After</span>
-          <h2>レッスン前後の変化を、<br />写真と体感で確認。</h2>
-          <p>
-            たすきストレッチでは、姿勢・肩の位置・横から見た立ち姿などをレッスン前後で確認します。
-            <br/>「変化を保証する」ものではなく、自分の身体の状態に気づくためのチェックとして活用します。
-          </p>
-        </div>
-
-        <div class="before-after-grid">
-          <article class="ba-card">
-            <div class="ba-card-header">
-              <span class="label gold">Front view</span>
-              <h3>正面の姿勢チェック</h3>
-            </div>
-            <img src="image/lp_image_4.png" alt="たすきストレッチ前後の正面姿勢比較写真" />
-            <p>肩の高さ、首まわり、腕の位置、立ち姿の印象などを確認します。</p>
-          </article>
-
-          <article class="ba-card">
-            <div class="ba-card-header">
-              <span class="label rose">Side view</span>
-              <h3>横向きの姿勢チェック</h3>
-            </div>
-            <img src="image/lp_image_3.png" alt="たすきストレッチ前後の横向き姿勢比較写真" />
-            <p>頭・肩・背中・骨盤まわりの見え方や、身体の軸の感覚を確認します。</p>
-          </article>
-        </div>
-              <p class="note" style="text-align:center;margin-top:22px;">写真は体験時の確認イメージです。見え方や体感には個人差があります。医療的効果、治療、痩身効果等を示すものではありません。</p>
-      </div>
-    </section>
-    <section class="section">
-      <div class="container">
-        <div class="section-title">
-          <span class="en">Voices</span>
-          <h2>みなさんの声</h2>
-        </div>
-        <div class="voice-grid">
-          <article class="voice-card"><div class="voice-meta">30代女性 / デスクワーク</div><h3>肩や背中の位置に気づけた</h3><p>普段どれだけ前のめりで過ごしていたかに気づけました。終わったあとは立ちやすく、写真の見え方も違って驚きました。</p></article>
-          <article class="voice-card"><div class="voice-meta">40代女性 / 美容習慣づくり</div><h3>自分の身体を見る時間になった</h3><p>ただ伸ばすだけではなく、呼吸や姿勢を丁寧に意識できる時間でした。無理なく続けられそうです。</p></article>
-          <article class="voice-card"><div class="voice-meta">30代女性 / 大切な予定の前に</div><h3>立ち姿の意識が変わった</h3><p>写真を撮る予定の前に受けました。身体が軽くなった感覚があり、自然と姿勢も意識しやすくなりました。</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="faq">
-      <div class="container">
-        <div class="section-title">
-          <span class="en">FAQ</span>
-          <h2>よくあるご質問</h2>
-        </div>
-        <div class="faq-list">
-          <details class="faq-item" open>
-            <summary>身体が硬くても参加できますか？</summary>
-            <p>はい。無理に伸ばすのではなく、気持ちよく動かせる範囲で行います。痛みがある場合はすぐに中止・調整します。</p>
-          </details>
-          <details class="faq-item">
-            <summary>男性も利用できますか？</summary>
-            <p>ご利用いただけます。開催回・会場により対象が異なる場合があるため、予約時にご確認ください。</p>
-          </details>
-          <details class="faq-item">
-            <summary>持ち物はありますか？</summary>
-            <p>動きやすい服装、飲み物、必要に応じてタオルをご持参ください。専用タスキはレッスン時にご用意します。</p>
-          </details>
-          <details class="faq-item">
-            <summary>治療や整体とは違いますか？</summary>
-            <p>本サービスは医療行為・治療・整体・痩身効果を保証するものではありません。姿勢意識、身体感覚、美容意識、印象づくりをサポートするレッスンです。</p>
-          </details>
-          <details class="faq-item">
-            <summary>参加を控えた方がよいケースはありますか？</summary>
-            <p>発熱、体調不良、強い痛みやしびれ、医師から運動制限を受けている場合、妊娠中または妊娠の可能性がある場合などは、事前にご相談ください。</p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="reserve">
-      <div class="container final-cta">
-        <span class="eyebrow">Reserve</span>
-        <h2>美しく、しなやかに、<br />私を整える。</h2>
-        <p>まずは初回体験から。<br />たすきで身体の感覚に気づき、日常の姿勢と呼吸を整えるきっかけをつくりませんか。</p>
-        <div class="hero-actions" style="justify-content:center;">
-          <a class="btn gold"   
-            href="https://reserva.be/tasukistretch/reserve?mode=service_staff&search_evt_no=65eJwzNTYyMTUGAAREATc"  
-            onclick="gtag('event', 'click_reserva', {
-              event_category: 'outbound',
-              event_label: 'reserve_button'
-              });"
-            >初回体験を予約する</a>
-          <a class="btn subtle"   
-            href="https://lin.ee/ys3Z9mR"  
-            onclick="gtag('event', 'click_line', {
-              event_category: 'outbound',
-              event_label: 'line_button'
-            });"
-            >問い合わせる</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <div class="sticky-cta" role="region" aria-label="固定予約ボタン">
-    <span>まずは初回体験から。</span>
-    <a class="btn" href="#reserve">体験予約</a>
-  </div>
-
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div>
-        <div class="brand"><img class="brand-mark" src="image/tasuki-logo.png" alt="TASUKI STRETCH ロゴ" /><span>TASUKI STRETCH</span></div>
-        <p>タスキストレッチ（TASUKI STRETCH）</p>
-      </div>
-      <div class="legal">
-        <strong>免責・表現上の注意</strong><br />
-        本サービスは医療行為、治療、整体、痩身、疾病の予防・改善を目的としたものではありません。効果実感には個人差があります。持病・怪我・通院中・妊娠中の方は、事前に医師へご相談のうえご参加ください。
-      </div>
-    </div>
-  </footer>
+	<script src="menu-loader.js" defer></script>
+	<script src="footer-loader.js" defer></script>
+	<script src="main.js" defer></script>
 </body>
 </html>
