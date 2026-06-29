@@ -5,11 +5,11 @@
     const button = document.createElement("a");
     button.id = "sticky-cta-button";
     button.className = "sticky-cta-button";
-    button.href = "https://reserva.be/tasukistretch/reserve?mode=service_staff&search_evt_no=65eJwzNTYyMTUGAAREATc";
+    button.href = "https://reserva.be/tasukistretch/reserve?mode=service_staff&search_evt_no=13eJwzNTa3MDIHAARiAUE";
     button.target = "_blank";
     button.rel = "noopener noreferrer";
-    button.setAttribute("aria-label", "初回体験申込みページへ移動（新しいウィンドウで開く）");
-    button.textContent = "初回体験申込み";
+    button.setAttribute("aria-label", "無料体験申込みページへ移動（新しいウィンドウで開く）");
+    button.textContent = "無料体験申込み";
 
     document.body.appendChild(button);
   }
@@ -67,6 +67,7 @@
                 <li><a href="${basePrefix}column/index.html">美・健康コラム</a></li>
                 <li><a href="${basePrefix}plan/index.html">料金プラン</a></li>
                 <li><a href="${basePrefix}access/index.html">店舗・アクセス</a></li>
+                <li><a href="https://lin.ee/ys3Z9mR" target="_blank" rel="noopener noreferrer">問合せ</a></li>
               </ul>
             </nav>
             <section class="footer-company" aria-label="運営会社情報">
